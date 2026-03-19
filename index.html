@@ -164,17 +164,18 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
   margin: 16px 0;
 }
 .two-col ul li {
-  padding: 6px 0 6px 18px;
+  padding: 6px 0 6px 28px;
   position: relative;
   font-size: 18px;
   line-height: 28px;
 }
 .two-col ul li::before {
-  content: '\2022';
+  content: '\2713';
   position: absolute;
   left: 0;
-  color: var(--cognita-blue);
+  color: var(--cognita-teal);
   font-weight: 700;
+  font-size: 18px;
 }
 .two-col.bg-light-blue { background: var(--cognita-light-blue); }
 .two-col.bg-dark { background: var(--cognita-dark); color: #fff; }
@@ -200,12 +201,17 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
    SCHOOL CARDS (Cognita card--white)
    ============================================ */
 .schools-section { padding: 60px 0; background: var(--cognita-white); }
-.country-group { margin-bottom: 40px; }
-.country-heading {
-  font-size: 28px; font-weight: 500; color: var(--cognita-blue); line-height: 36px;
-  margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--cognita-light-grey);
+.school-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.country-label {
+  font-family: var(--font-main); font-size: 22px; font-weight: 600; color: var(--cognita-blue);
+  padding-bottom: 8px; border-bottom: 2px solid var(--cognita-blue); margin-bottom: 0; align-self: end;
 }
-.school-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.col-1 { grid-column: 1; }
+.col-2 { grid-column: 2; }
+.col-3 { grid-column: 3; }
+.col-1-3 { grid-column: 1 / -1; }
+.col-1-2 { grid-column: 1 / 3; }
+.col-2-3 { grid-column: 2 / 4; }
 .back-to-menu { display: block; text-align: center; margin: 32px 0 0; font-size: 15px; font-weight: 600; color: var(--cognita-blue); }
 .back-to-menu:hover { text-decoration: underline; }
 .back-to-top { display: block; text-align: center; margin: 24px 0; font-size: 15px; font-weight: 600; color: var(--cognita-blue); }
@@ -229,7 +235,6 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
 .school-card-desc {
   font-size: 16px; color: var(--cognita-text-light); line-height: 24px;
   margin-bottom: 16px; flex: 1;
-  display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden;
 }
 .school-card-cta { padding-top: 12px; margin-top: auto; }
 .find-out-more {
@@ -263,10 +268,14 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
 /* ============================================
    ENQUIRY FORM
    ============================================ */
-.enquiry-section { padding: 80px 0; background: var(--cognita-dark); color: #fff; }
+.enquiry-section { padding: 80px 0; background: var(--cognita-dark); color: #fff; position: relative; overflow: hidden; }
+.enquiry-bg { position: absolute; inset: 0; background: url('images/mask-group-3-2x.webp') center/cover no-repeat; opacity: 0.15; }
+.enquiry-section .container { position: relative; z-index: 2; }
 .enquiry-section h2 { color: #fff; }
 .enquiry-section .h2-underline::after { background: var(--cognita-teal); }
 .enquiry-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.enquiry-image { border-radius: 6px; overflow: hidden; }
+.enquiry-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; }
 .enquiry-text p { color: rgba(255,255,255,0.85); }
 .enquiry-form { background: #fff; padding: 32px; border-radius: 6px; color: var(--cognita-text); }
 .form-group { margin-bottom: 16px; }
@@ -290,6 +299,7 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
 .faq-section { padding: 80px 0; background: var(--cognita-light-grey); }
 .faq-grid { max-width: 800px; margin: 32px auto 0; }
 .faq-item { background: #fff; margin-bottom: 2px; }
+.faq-item h3 { font-size: 18px; line-height: 28px; margin: 0; }
 .faq-question {
   width: 100%; text-align: left; padding: 20px 48px 20px 24px;
   background: none; border: none; font-family: var(--font-main);
@@ -341,7 +351,8 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
   .container { padding: 0 24px; }
   .hero { height: 250px; }
   .hero h1 { font-size: 36px; line-height: 44px; }
-  .school-cards { grid-template-columns: 1fr !important; }
+  .school-grid { grid-template-columns: 1fr !important; }
+  .country-label { grid-column: 1 !important; }
   .form-row { grid-template-columns: 1fr; }
   .sub-page-grid { grid-template-columns: 1fr; }
   .text-section ul { columns: 1; }
@@ -392,8 +403,8 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
   </div>
 </section>
 
-<!-- BLOCK 2: Reassurance (text-left, image-right - alternating) -->
-<section class="two-col">
+<!-- BLOCK 2: When Families Move (image-left, text-right) -->
+<section class="two-col reverse">
   <div class="container">
     <div>
       <h2 class="h2-underline">When Families Move, Stability Matters Most</h2>
@@ -413,12 +424,9 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
   </div>
 </section>
 
-<!-- BLOCK 3: Why Asia (image-left, text-right) -->
+<!-- BLOCK 3: Why Asia (text-left, image-right) -->
 <section class="two-col bg-light-blue">
   <div class="container">
-    <div>
-      <img src="https://www.cognita.com/wp-content/uploads/sites/10/2024/02/DOWNSEND_GENESIS_LR-113-e1707155748911.jpg" alt="International school students" class="rect-img">
-    </div>
     <div>
       <h2 class="h2-underline">Why Families Choose Asia</h2>
       <p>Asia is home to some of the world's most dynamic cities and international communities. Families relocating here benefit from:</p>
@@ -431,50 +439,52 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
       </ul>
       <p>Through Cognita, families also gain access to a global network of leading schools across multiple countries, making future relocations smoother.</p>
     </div>
+    <div>
+      <img src="https://www.cognita.com/wp-content/uploads/sites/10/2024/02/DOWNSEND_GENESIS_LR-113-e1707155748911.jpg" alt="International school students" class="rect-img">
+    </div>
   </div>
 </section>
 
 <!-- JUMP LINKS -->
 <div class="jump-links" id="schools">
   <div class="container">
-    <span class="jump-links-label">Jump to:</span>
+    <span class="jump-links-label">Cognita Asia Schools:</span>
     <a href="#singapore">Singapore</a>
     <a href="#hong-kong">Hong Kong</a>
     <a href="#thailand">Thailand</a>
-    <a href="#vietnam">Vietnam</a>
     <a href="#india">India</a>
+    <a href="#vietnam">Vietnam</a>
   </div>
 </div>
 
 <!-- SCHOOLS SECTION -->
 <section class="schools-section">
   <div class="container">
+    <div class="school-grid">
 
-    <!-- SINGAPORE -->
-    <div class="country-group" id="singapore">
-      <h2 class="country-heading">Singapore</h2>
-      <div class="school-cards">
+      <!-- Row 1: Singapore -->
+      <h3 class="country-label col-1-3" id="singapore">Singapore</h3>
 
-        <div class="school-card">
-          <div class="school-card-image">
-            <img src="images/schools/ais-singapore.webp" alt="Australian International School Singapore">
-          </div>
-          <div class="school-card-body">
-            <div class="school-card-logo"><img src="images/logos/ais-singapore.webp" alt="AIS Logo"></div>
-            <h3 class="school-card-title">Australian International School Singapore</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 2 months to 18 years &bull; Boarding available<br><strong>Pathway:</strong> Infant Care to Year 12<br><strong>Curriculum:</strong> Australian, Cambridge IGCSE, IB Diploma, HSC</div>
-            <p class="school-card-desc">An exceptional IB World School providing education from infant care to Year 12 on a single campus. Known for its welcoming international community of over 50 nationalities, AIS combines academic excellence with a strong focus on wellbeing and personal growth, with 99% of graduates accepted into their first-choice university.</p>
-            <div class="school-card-cta"><a href="https://www.ais.com.sg/" class="find-out-more">Find out more</a></div>
-          </div>
+      <div class="school-card">
+        <div class="school-card-image">
+          <img src="images/schools/ais-singapore.webp" alt="Australian International School Singapore">
         </div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/ais-singapore.webp" alt="AIS Logo"></div>
+          <h3 class="school-card-title">Australian International School (Singapore)</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 2 months to 18 years &bull; Boarding available<br><strong>Pathway:</strong> Infant Care to Year 12<br><strong>Curriculum:</strong> Australian, Cambridge IGCSE, IB Diploma, HSC</div>
+          <p class="school-card-desc">An exceptional IB World School providing education from infant care to Year 12 on a single campus. Known for its welcoming international community of over 50 nationalities, AIS combines academic excellence with a strong focus on wellbeing and personal growth, with 99% of graduates accepted into their first-choice university.</p>
+          <div class="school-card-cta"><a href="https://www.ais.com.sg/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
 
-        <div class="school-card">
-          <div class="school-card-image">
-            <img src="images/schools/bcs-singapore.webp" alt="Brighton College Singapore">
+      <div class="school-card">
+        <div class="school-card-image">
+          <img src="images/schools/bcs-singapore.webp" alt="Brighton College Singapore">
           </div>
           <div class="school-card-body">
             <div class="school-card-logo"><img src="images/logos/bcs-singapore.webp" alt="BCS Logo"></div>
-            <h3 class="school-card-title">Brighton College Singapore</h3>
+            <h3 class="school-card-title">Brighton College (Singapore)</h3>
             <div class="school-card-meta"><strong>Ages:</strong> 18 months to 18 years<br><strong>Pathway:</strong> Pre-Nursery to Year 13<br><strong>Curriculum:</strong> English National Curriculum, IGCSE, A Levels</div>
             <p class="school-card-desc">An academically ambitious school that fosters a love of learning. Inspired by the heritage and academic tradition of Brighton College in the UK, the school is guided by the values of curiosity, confidence and kindness, with exceptional pastoral care and a rich programme of sport, music and the performing arts.</p>
             <div class="school-card-cta"><a href="https://www.brightoncollege.edu.sg/" class="find-out-more">Find out more</a></div>
@@ -494,111 +504,103 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
           </div>
         </div>
 
-      </div>
-    </div>
+      <!-- Row 2: Hong Kong + Thailand -->
+      <h3 class="country-label col-1" id="hong-kong">Hong Kong</h3>
+      <h3 class="country-label col-2-3" id="thailand">Thailand</h3>
 
-    <!-- HONG KONG & THAILAND -->
-    <div class="country-group" id="hong-kong">
-      <h2 class="country-heading"><span id="thailand"></span>Hong Kong &amp; Thailand</h2>
-      <div class="school-cards">
-        <div class="school-card">
-          <div class="school-card-image">
-            <img src="images/schools/sas-hong-kong.webp" alt="Stamford American School Hong Kong">
-          </div>
-          <div class="school-card-body">
-            <div class="school-card-logo"><img src="images/logos/sas-hong-kong.webp" alt="SAS HK Logo"></div>
-            <h3 class="school-card-title">Stamford American School Hong Kong</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 5 to 18 years<br><strong>Pathway:</strong> KG2 to Grade 12<br><strong>Curriculum:</strong> American Curriculum, International Baccalaureate</div>
-            <p class="school-card-desc">A world-class international education blending rigorous American standards with an innovative, inquiry-based learning approach. Students choose from three graduation pathways: the full IB Diploma, select IB courses, or the Stamford American High School Diploma.</p>
-            <div class="school-card-cta"><a href="https://www.sais.edu.hk/" class="find-out-more">Find out more</a></div>
-          </div>
+      <div class="school-card">
+        <div class="school-card-image">
+          <img src="images/schools/sas-hong-kong.webp" alt="Stamford American School Hong Kong">
         </div>
-        <div class="school-card">
-          <div class="school-card-image"><img src="images/schools/st-andrews-dusit.webp" alt="St Andrews Dusit"></div>
-          <div class="school-card-body">
-            <div class="school-card-logo"><img src="images/logos/st-andrews-dusit.webp" alt="St Andrews Dusit Logo"></div>
-            <h3 class="school-card-title">St Andrews International School Dusit</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 2 to 11 years<br><strong>Pathway:</strong> Pre-Nursery to Year 6<br><strong>Curriculum:</strong> English National Curriculum</div>
-            <p class="school-card-desc">A small, inclusive primary school in central Bangkok, recognised as Cognita Asia's School of the Year. Empowers curious individuals through an engaging British curriculum, enrichment clubs, student leadership and sustainability initiatives.</p>
-            <div class="school-card-cta"><a href="https://www.standrewsdusit.com/" class="find-out-more">Find out more</a></div>
-          </div>
-        </div>
-        <div class="school-card">
-          <div class="school-card-image"><img src="images/schools/st-andrews-green-valley.webp" alt="St Andrews Green Valley"></div>
-          <div class="school-card-body">
-            <div class="school-card-logo"><img src="images/logos/st-andrews-green-valley.webp" alt="St Andrews GV Logo"></div>
-            <h3 class="school-card-title">St Andrews International School Green Valley</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 2 to 18 years<br><strong>Pathway:</strong> Pre-Nursery to Year 13<br><strong>Curriculum:</strong> English National Curriculum, IGCSEs, IB Diploma</div>
-            <p class="school-card-desc">Set on a spacious 80-acre tropical estate in Rayong. Known for outdoor learning philosophy, elite sports facilities including an 8-lane pool and equestrian centre, welcoming students from 35 nationalities.</p>
-            <div class="school-card-cta"><a href="https://www.standrewsgreenvalley.com/" class="find-out-more">Find out more</a></div>
-          </div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/sas-hong-kong.webp" alt="SAS HK Logo"></div>
+          <h3 class="school-card-title">Stamford American School Hong Kong</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 5 to 18 years<br><strong>Pathway:</strong> KG2 to Grade 12<br><strong>Curriculum:</strong> American Curriculum, International Baccalaureate</div>
+          <p class="school-card-desc">A world-class international education blending rigorous American standards with an innovative, inquiry-based learning approach. Students choose from three graduation pathways: the full IB Diploma, select IB courses, or the Stamford American High School Diploma.</p>
+          <div class="school-card-cta"><a href="https://www.sais.edu.hk/" class="find-out-more">Find out more</a></div>
         </div>
       </div>
-    </div>
+      <div class="school-card">
+        <div class="school-card-image"><img src="images/schools/st-andrews-dusit.webp" alt="St Andrews Dusit"></div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/st-andrews-dusit.webp" alt="St Andrews Dusit Logo"></div>
+          <h3 class="school-card-title">St Andrews International School Dusit</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 2 to 11 years<br><strong>Pathway:</strong> Pre-Nursery to Year 6<br><strong>Curriculum:</strong> English National Curriculum</div>
+          <p class="school-card-desc">A small, inclusive primary school in central Bangkok, recognised as Cognita Asia's School of the Year. Empowers curious individuals through an engaging British curriculum, enrichment clubs, student leadership and sustainability initiatives.</p>
+          <div class="school-card-cta"><a href="https://www.standrewsdusit.com/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
+      <div class="school-card">
+        <div class="school-card-image"><img src="images/schools/st-andrews-green-valley.webp" alt="St Andrews Green Valley"></div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/st-andrews-green-valley.webp" alt="St Andrews GV Logo"></div>
+          <h3 class="school-card-title">St Andrews International School Green Valley</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 2 to 18 years<br><strong>Pathway:</strong> Pre-Nursery to Year 13<br><strong>Curriculum:</strong> English National Curriculum, IGCSEs, IB Diploma</div>
+          <p class="school-card-desc">Set on a spacious 80-acre tropical estate in Rayong. Known for outdoor learning philosophy, elite sports facilities including an 8-lane pool and equestrian centre, welcoming students from 35 nationalities.</p>
+          <div class="school-card-cta"><a href="https://www.standrewsgreenvalley.com/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
 
-    <!-- THAILAND (continued) & INDIA -->
-    <div class="country-group" id="india">
-      <h2 class="country-heading">Thailand &amp; India</h2>
-      <div class="school-cards">
-        <div class="school-card">
-          <div class="school-card-image"><img src="images/schools/st-andrews-sathorn.webp" alt="St Andrews Sathorn"></div>
-          <div class="school-card-body">
-            <div class="school-card-logo"><img src="images/logos/st-andrews-sathorn.webp" alt="St Andrews Sathorn Logo"></div>
-            <h3 class="school-card-title">St Andrews International School Sathorn</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 2 to 11 years<br><strong>Pathway:</strong> Nursery to Year 6<br><strong>Curriculum:</strong> English National Curriculum</div>
-            <p class="school-card-desc">A primary-focused campus in central Bangkok, providing a caring British education that recognises each child's individual needs. Part of the Cognita family, benefiting from shared resources and a supportive, tolerant community.</p>
-            <div class="school-card-cta"><a href="https://www.standrewssathorn.com/" class="find-out-more">Find out more</a></div>
-          </div>
-        </div>
-        <div class="school-card">
-          <div class="school-card-image"><img src="images/schools/st-andrews-sukhumvit-107.webp" alt="St Andrews Sukhumvit 107"></div>
-          <div class="school-card-body">
-            <div class="school-card-logo"><img src="images/logos/st-andrews-sukhumvit-107.webp" alt="St Andrews Sukhumvit Logo"></div>
-            <h3 class="school-card-title">St Andrews International School Sukhumvit 107</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 2 to 18 years<br><strong>Pathway:</strong> Nursery to Year 13<br><strong>Curriculum:</strong> English National Curriculum, IGCSEs, IB Diploma</div>
-            <p class="school-card-desc">Provides a holistic British education integrated with the IB Primary Years Programme and IB Diploma. Fosters critical thinking, creativity and a global outlook across a diverse community of over 55 nationalities.</p>
-            <div class="school-card-cta"><a href="https://www.standrewssukhumvit.com/" class="find-out-more">Find out more</a></div>
-          </div>
-        </div>
-        <div class="school-card">
-          <div class="school-card-image"><img src="images/schools/chirec-india.webp" alt="CHIREC International School"></div>
-          <div class="school-card-body">
-            <div class="school-card-logo"><img src="images/logos/chirec-india.webp" alt="CHIREC Logo"></div>
-            <h3 class="school-card-title">CHIREC International School</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 18 months to 18 years<br><strong>Pathway:</strong> Nursery to Grade 12<br><strong>Curriculum:</strong> CBSE, Cambridge, IB Diploma, IB Career-related</div>
-            <p class="school-card-desc">Consistently ranked among the top schools in India, with over 35 years of experience educating the whole child. Combines innovative teaching with a focus on ethics, character building and academic excellence across three campuses, with a 1:13 student-teacher ratio.</p>
-            <div class="school-card-cta"><a href="https://www.chirec.ac.in/" class="find-out-more">Find out more</a></div>
-          </div>
-        </div>
-      </div>
-    </div>
+      <!-- Row 3: Thailand (cont.) + India -->
+      <h3 class="country-label col-1-2">Thailand cont.</h3>
+      <h3 class="country-label col-3" id="india">India</h3>
 
-    <!-- VIETNAM -->
-    <div class="country-group" id="vietnam">
-      <h2 class="country-heading">Vietnam</h2>
-      <div class="school-cards">
-        <div class="school-card">
-          <div class="school-card-image"><img src="images/schools/ishcmc-vietnam.webp" alt="ISHCMC"></div>
-          <div class="school-card-body">
-            <div class="school-card-logo"><img src="images/logos/ishcmc-vietnam.webp" alt="ISHCMC Logo"></div>
-            <h3 class="school-card-title">International School Ho Chi Minh City (ISHCMC)</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 2 to 18 years<br><strong>Pathway:</strong> Early Explorers to Grade 12<br><strong>Curriculum:</strong> International Baccalaureate (PYP, MYP, DP)</div>
-            <p class="school-card-desc">Ho Chi Minh City's first international school, with over 30 years of experience. As a full IB World School, ISHCMC serves students from 60+ nationalities. 98% of graduates are accepted to their top-choice university, earning over $56 million USD in scholarships.</p>
-            <div class="school-card-cta"><a href="https://www.ishcmc.com/" class="find-out-more">Find out more</a></div>
-          </div>
-        </div>
-        <div class="school-card">
-          <div class="school-card-image"><img src="images/schools/ishcmc-american-academy.webp" alt="ISHCMC American Academy"></div>
-          <div class="school-card-body">
-            <div class="school-card-logo"><img src="images/logos/ishcmc-american-academy.webp" alt="ISHCMC AA Logo"></div>
-            <h3 class="school-card-title">ISHCMC - American Academy</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 11 to 18 years<br><strong>Pathway:</strong> Grade 6 to Grade 12<br><strong>Curriculum:</strong> American Curriculum, AP, Syracuse University SUPA</div>
-            <p class="school-card-desc">The first high school in Vietnam to offer Advanced Placement (AP) and Syracuse University (SUPA) credits. A 100% English-language curriculum combined with Vietnamese language studies, empowering students for competitive university applications worldwide.</p>
-            <div class="school-card-cta"><a href="https://www.aavn.edu.vn/" class="find-out-more">Find out more</a></div>
-          </div>
+      <div class="school-card">
+        <div class="school-card-image"><img src="images/schools/st-andrews-sathorn.webp" alt="St Andrews Sathorn"></div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/st-andrews-sathorn.webp" alt="St Andrews Sathorn Logo"></div>
+          <h3 class="school-card-title">St Andrews International School Sathorn</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 2 to 11 years<br><strong>Pathway:</strong> Nursery to Year 6<br><strong>Curriculum:</strong> English National Curriculum</div>
+          <p class="school-card-desc">A primary-focused campus in central Bangkok, providing a caring British education that recognises each child's individual needs. Part of the Cognita family, benefiting from shared resources and a supportive, tolerant community.</p>
+          <div class="school-card-cta"><a href="https://www.standrewssathorn.com/" class="find-out-more">Find out more</a></div>
         </div>
       </div>
-    </div>
+      <div class="school-card">
+        <div class="school-card-image"><img src="images/schools/st-andrews-sukhumvit-107.webp" alt="St Andrews Sukhumvit 107"></div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/st-andrews-sukhumvit-107.webp" alt="St Andrews Sukhumvit Logo"></div>
+          <h3 class="school-card-title">St Andrews International School Sukhumvit 107</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 2 to 18 years<br><strong>Pathway:</strong> Nursery to Year 13<br><strong>Curriculum:</strong> English National Curriculum, IGCSEs, IB Diploma</div>
+          <p class="school-card-desc">Provides a holistic British education integrated with the IB Primary Years Programme and IB Diploma. Fosters critical thinking, creativity and a global outlook across a diverse community of over 55 nationalities.</p>
+          <div class="school-card-cta"><a href="https://www.standrewssukhumvit.com/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
+      <div class="school-card">
+        <div class="school-card-image"><img src="images/schools/chirec-india.webp" alt="CHIREC International School"></div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/chirec-india.webp" alt="CHIREC Logo"></div>
+          <h3 class="school-card-title">CHIREC International School</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 18 months to 18 years<br><strong>Pathway:</strong> Nursery to Grade 12<br><strong>Curriculum:</strong> CBSE, Cambridge, IB Diploma, IB Career-related</div>
+          <p class="school-card-desc">Consistently ranked among the top schools in India, with over 35 years of experience educating the whole child. Combines innovative teaching with a focus on ethics, character building and academic excellence across three campuses, with a 1:13 student-teacher ratio.</p>
+          <div class="school-card-cta"><a href="https://www.chirec.ac.in/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
+
+      <!-- Row 4: Vietnam -->
+      <h3 class="country-label col-1-3" id="vietnam">Vietnam</h3>
+
+      <div class="school-card">
+        <div class="school-card-image"><img src="images/schools/ishcmc-vietnam.webp" alt="ISHCMC"></div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/ishcmc-vietnam.webp" alt="ISHCMC Logo"></div>
+          <h3 class="school-card-title">International School Ho Chi Minh City (ISHCMC)</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 2 to 18 years<br><strong>Pathway:</strong> Early Explorers to Grade 12<br><strong>Curriculum:</strong> International Baccalaureate (PYP, MYP, DP)</div>
+          <p class="school-card-desc">Ho Chi Minh City's first international school, with over 30 years of experience. As a full IB World School, ISHCMC serves students from 60+ nationalities. 98% of graduates are accepted to their top-choice university, earning over $56 million USD in scholarships.</p>
+          <div class="school-card-cta"><a href="https://www.ishcmc.com/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
+      <div class="school-card">
+        <div class="school-card-image"><img src="images/schools/ishcmc-american-academy.webp" alt="ISHCMC American Academy"></div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/ishcmc-american-academy.webp" alt="ISHCMC AA Logo"></div>
+          <h3 class="school-card-title">ISHCMC - American Academy</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 11 to 18 years<br><strong>Pathway:</strong> Grade 6 to Grade 12<br><strong>Curriculum:</strong> American Curriculum, AP, Syracuse University SUPA</div>
+          <p class="school-card-desc">The first high school in Vietnam to offer Advanced Placement (AP) and Syracuse University (SUPA) credits. A 100% English-language curriculum combined with Vietnamese language studies, empowering students for competitive university applications worldwide.</p>
+          <div class="school-card-cta"><a href="https://www.aavn.edu.vn/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
+
+    </div><!-- /school-grid -->
 
     <a href="#schools" class="back-to-menu">Back to country menu</a>
 
@@ -607,11 +609,12 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
 
 <!-- ENQUIRY FORM (moved up after schools) -->
 <section class="enquiry-section" id="enquiry">
+  <div class="enquiry-bg"></div>
   <div class="container">
     <div class="enquiry-grid">
       <div class="enquiry-text">
         <h2 class="h2-underline">Relocating to Asia? Let Us Help</h2>
-        <p>To better support relocating families, please share your details below. Our admissions team will provide tailored guidance for your family's needs.</p>
+        <p>Tell us about your family's moving plans and we'll connect you with the right school's admissions team to provide tailored guidance for your family's needs. Need more information? We can also arrange online consultations or invite you to virtual school open houses.</p>
       </div>
       <form class="enquiry-form" onsubmit="return false;">
         <div class="form-row">
@@ -633,25 +636,25 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
         </div>
         <button type="submit" class="form-submit">Speak With Our Admissions Team</button>
       </form>
-    </div>
+    </div><!-- /enquiry-grid -->
   </div>
 </section>
 
-<!-- MID-YEAR TRANSFER (dark bg, image-left text-right) -->
-<section class="two-col bg-dark reverse">
+<!-- JOINING MID-YEAR (white bg, text-left, image-right) -->
+<section class="two-col">
   <div class="container">
     <div>
       <h2 class="h2-underline">Joining Mid-Year? We Make It Easy</h2>
       <p>Our admissions teams across Asia regularly support families relocating during the school year.</p>
-      <p><strong style="color:#fff;">We can assist with:</strong></p>
+      <p><strong>We can assist with:</strong></p>
       <ul>
-        <li>Fast-track admissions</li>
+        <li>Priority enrolment processing</li>
         <li>Curriculum alignment guidance</li>
         <li>Transition support for students and families</li>
         <li>Advice on settling into your new city</li>
       </ul>
       <p>For many relocating families, children are able to join classes within weeks of application.</p>
-      <a href="#enquiry" class="btn btn-white" style="margin-top:8px;">Start Your Transfer Application</a>
+      <a href="#enquiry" class="btn" style="margin-top:8px;">Start Your Transfer Application</a>
     </div>
     <div>
       <img src="https://www.cognita.com/wp-content/uploads/sites/10/2023/10/2J6A2087_b.jpg" alt="Students and teacher" class="rect-img">
@@ -659,8 +662,8 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
   </div>
 </section>
 
-<!-- FAMILY SUPPORT (two-col, text-left, image-right) -->
-<section class="two-col bg-light-blue">
+<!-- SUPPORTING THE WHOLE FAMILY (image-left, text-right) -->
+<section class="two-col bg-light-blue reverse">
   <div class="container">
     <div>
       <h2 class="h2-underline">Supporting the Whole Family</h2>
@@ -675,44 +678,21 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
       </ul>
     </div>
     <div>
-      <img src="https://www.cognita.com/wp-content/uploads/sites/10/2024/02/Cognita-Day-1-377.jpg" alt="Cognita school community" class="rect-img">
+      <img src="images/Culture-of-care.jpg" alt="Cognita culture of care" class="rect-img">
     </div>
   </div>
 </section>
 
-<!-- GLOBAL NETWORK (image-left, text-right) -->
+<!-- GLOBAL NETWORK (text-left, image-right) -->
 <section class="two-col">
   <div class="container">
     <div>
-      <img src="https://www.cognita.com/wp-content/uploads/sites/10/2021/06/Screen-Shot-2021-06-09-at-16.42.58-1.png" alt="Cognita global network" class="rect-img" style="border-radius:6px;">
+      <h2 class="h2-underline">A Global School Network</h2>
+      <p>Cognita operates more than 90 schools worldwide across Asia, Europe, the Middle East and the Americas.</p>
+      <p>If your family relocates again in the future, we can help support transitions between Cognita schools wherever possible through coordinated admissions support and internal document transfer.</p>
     </div>
     <div>
-      <h2 class="h2-underline">A Global School Network</h2>
-      <p>Cognita operates more than 100 schools worldwide across Asia, Europe, the Middle East and the Americas.</p>
-      <p>If your family relocates again in the future, we can help support transitions between Cognita schools wherever possible through coordinated admissions support and internal document transfer.</p>
-      <div class="network-stats">
-        <div class="network-stat"><span class="network-stat-value">100+</span><span class="network-stat-label">Schools Worldwide</span></div>
-        <div class="network-stat"><span class="network-stat-value">5</span><span class="network-stat-label">Regions</span></div>
-        <div class="network-stat"><span class="network-stat-value">21</span><span class="network-stat-label">Countries</span></div>
-        <div class="network-stat"><span class="network-stat-value">14</span><span class="network-stat-label">Curricula</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq-section">
-  <div class="container">
-    <div class="faq-grid">
-      <h2 class="h2-underline">Frequently Asked Questions</h2>
-      <div class="faq-item open"><button class="faq-question" onclick="this.parentElement.classList.toggle('open')">Can my child join mid-year?</button><div class="faq-answer">Yes. Many students join Cognita schools throughout the academic year depending on space availability. Our admissions teams are experienced in supporting families who need to relocate at short notice and can guide you through the process quickly.</div></div>
-      <div class="faq-item"><button class="faq-question" onclick="this.parentElement.classList.toggle('open')">Do you support students transferring between different curricula?</button><div class="faq-answer">Yes. Our schools regularly support students transferring from British, American, IB, Australian and other international systems. Cognita offers schools across multiple curriculum pathways, so we can help identify the best fit for your child's academic background and future goals.</div></div>
-      <div class="faq-item"><button class="faq-question" onclick="this.parentElement.classList.toggle('open')">How quickly can admissions be processed?</button><div class="faq-answer">Admissions reviews are typically completed within a few days once required documents are received. Students transferring between Cognita schools benefit from a seamless process, with records shared internally to support a smooth transition.</div></div>
-      <div class="faq-item"><button class="faq-question" onclick="this.parentElement.classList.toggle('open')">Can we visit before relocating?</button><div class="faq-answer">Yes. Virtual tours and admissions meetings are available for families who are not yet able to travel. Many of our schools also offer in-person campus tours that can be arranged to coincide with a visit to the city.</div></div>
-      <div class="faq-item"><button class="faq-question" onclick="this.parentElement.classList.toggle('open')">What curriculum options are available at Cognita schools in Asia?</button><div class="faq-answer">Cognita schools in Asia offer a wide range of internationally recognised curricula including the International Baccalaureate (IB), British (English National Curriculum with IGCSEs and A Levels), American, Australian and Indian (CBSE and Cambridge). This breadth means families relocating to Asia can often find curriculum continuity for their child, regardless of their previous schooling background.</div></div>
-      <div class="faq-item"><button class="faq-question" onclick="this.parentElement.classList.toggle('open')">Which countries in Asia does Cognita have schools?</button><div class="faq-answer">Cognita operates international schools across five countries in Asia: Singapore, Hong Kong, Thailand, Vietnam and India. Each country offers schools with distinct curriculum options and community profiles, giving relocating families genuine choice based on their destination and educational preferences.</div></div>
-      <div class="faq-item"><button class="faq-question" onclick="this.parentElement.classList.toggle('open')">How does Cognita support families relocating between countries?</button><div class="faq-answer">As a global school network, Cognita can support families who move between countries by coordinating admissions, transferring student records internally, and providing curriculum alignment guidance. If your family relocates again in the future, the Cognita network makes transitions between schools smoother than starting from scratch with a new provider.</div></div>
-      <div class="faq-item"><button class="faq-question" onclick="this.parentElement.classList.toggle('open')">What age groups do Cognita schools in Asia cater for?</button><div class="faq-answer">Cognita schools in Asia cater for students from as young as 2 months (infant care at AIS Singapore) through to 18 years (Year 12 / Grade 12). Most schools offer education from early years or pre-primary through to secondary school completion, with several offering the full IB Diploma or A Level pathway for university preparation.</div></div>
+      <img src="images/3-GIF-Cognita-Numbers-NO-BG.gif" alt="Cognita global network - 100+ schools, 5 regions, 21 countries" style="width:66%; border-radius:6px; margin:0 auto;">
     </div>
   </div>
 </section>
@@ -723,6 +703,23 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
     <h2>Start Your Child's Next Chapter in Asia</h2>
     <p>Whether your relocation is planned or unexpected, Cognita schools across Asia are ready to welcome your family.</p>
     <a href="#enquiry" class="btn btn-white">Speak with Admissions</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="faq-grid">
+      <h2 class="h2-underline">Frequently Asked Questions</h2>
+      <div class="faq-item open"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">Can my child join mid-year?</button></h3><div class="faq-answer">Yes. Many students join Cognita schools throughout the academic year depending on space availability. Our admissions teams are experienced in supporting families who need to relocate at short notice and can guide you through the process quickly.</div></div>
+      <div class="faq-item"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">Do you support students transferring between different curricula?</button></h3><div class="faq-answer">Yes. Our schools regularly support students transferring from British, American, IB, Australian and other international systems. Cognita offers schools across multiple curriculum pathways, so we can help identify the best fit for your child's academic background and future goals.</div></div>
+      <div class="faq-item"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">How quickly can admissions be processed?</button></h3><div class="faq-answer">Admissions reviews are typically completed within a few days once required documents are received. Students transferring between Cognita schools benefit from a seamless process, with records shared internally to support a smooth transition.</div></div>
+      <div class="faq-item"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">Can we visit before relocating?</button></h3><div class="faq-answer">Yes. Virtual tours and admissions meetings are available for families who are not yet able to travel. Many of our schools also offer in-person campus tours that can be arranged to coincide with a visit to the city.</div></div>
+      <div class="faq-item"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">What curriculum options are available at Cognita schools in Asia?</button></h3><div class="faq-answer">Cognita schools in Asia offer a wide range of internationally recognised curricula including the International Baccalaureate (IB), British (English National Curriculum with IGCSEs and A Levels), American, Australian and Indian (CBSE and Cambridge). This breadth means families relocating to Asia can often find curriculum continuity for their child, regardless of their previous schooling background.</div></div>
+      <div class="faq-item"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">Which countries in Asia does Cognita have schools?</button></h3><div class="faq-answer">Cognita operates international schools across five countries in Asia: Singapore, Hong Kong, Thailand, Vietnam and India. Each country offers schools with distinct curriculum options and community profiles, giving relocating families genuine choice based on their destination and educational preferences.</div></div>
+      <div class="faq-item"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">How does Cognita support families relocating between countries?</button></h3><div class="faq-answer">As a global school network, Cognita can support families who move between countries by coordinating admissions, transferring student records internally, and providing curriculum alignment guidance. If your family relocates again in the future, the Cognita network makes transitions between schools smoother than starting from scratch with a new provider.</div></div>
+      <div class="faq-item"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">What age groups do Cognita schools in Asia cater for?</button></h3><div class="faq-answer">Cognita schools in Asia cater for students from as young as 2 months (infant care at AIS Singapore) through to 18 years (Year 12 / Grade 12). Most schools offer education from early years or pre-primary through to secondary school completion, with several offering the full IB Diploma or A Level pathway for university preparation.</div></div>
+    </div>
   </div>
 </section>
 
