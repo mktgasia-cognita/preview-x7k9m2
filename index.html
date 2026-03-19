@@ -216,6 +216,50 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
 .back-to-menu:hover { text-decoration: underline; }
 .back-to-top { display: block; text-align: center; margin: 24px 0; font-size: 15px; font-weight: 600; color: var(--cognita-blue); }
 .back-to-top:hover { text-decoration: underline; }
+
+/* Floating action buttons */
+.floating-btns { position: fixed; right: 24px; top: 50%; transform: translateY(-50%); z-index: 900; display: flex; flex-direction: column; gap: 10px; }
+.floating-btn {
+  display: flex; align-items: center; gap: 10px; padding: 12px 24px 12px 18px;
+  border-radius: 30px; font-family: var(--font-main); font-size: 15px; font-weight: 600;
+  color: #fff; text-decoration: none; cursor: pointer; border: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2); transition: transform 0.2s, box-shadow 0.2s;
+}
+.floating-btn:hover { transform: scale(1.05); box-shadow: 0 6px 24px rgba(0,0,0,0.3); }
+.floating-btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+.floating-btn-whatsapp { background: #25D366; }
+.floating-btn-enquire { background: var(--cognita-blue); }
+
+/* Popup overlay */
+.popup-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+  z-index: 1000; align-items: center; justify-content: center;
+}
+.popup-overlay.active { display: flex; }
+.popup-content {
+  background: #fff; border-radius: 8px; padding: 40px; max-width: 560px; width: 90%;
+  max-height: 90vh; overflow-y: auto; position: relative;
+}
+.popup-close {
+  position: absolute; top: 12px; right: 16px; background: none; border: none;
+  font-size: 28px; cursor: pointer; color: var(--cognita-text-light); line-height: 1;
+}
+.popup-close:hover { color: var(--cognita-text); }
+.popup-content h2 { font-size: 28px; margin-bottom: 8px; }
+.popup-content p { font-size: 16px; margin-bottom: 20px; color: var(--cognita-text-light); }
+.popup-content .form-group { margin-bottom: 16px; }
+.popup-content label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 4px; color: var(--cognita-text); }
+.popup-content input, .popup-content select {
+  width: 100%; padding: 10px 14px; border: 1px solid #d0d0d0; border-radius: 4px;
+  font-family: var(--font-main); font-size: 15px;
+}
+.popup-content .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.popup-content .form-submit {
+  width: 100%; padding: 14px; background: var(--cognita-blue); color: #fff;
+  border: none; border-radius: 4px; font-family: var(--font-main); font-size: 16px;
+  font-weight: 600; cursor: pointer; margin-top: 8px;
+}
+.popup-content .form-submit:hover { background: #005a96; }
 .school-card {
   background: #fff; border-radius: 6px;
   box-shadow: rgba(16,23,30,0.15) 0px 0px 30px 0px;
@@ -734,6 +778,47 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
   <!-- Mobile -->
   <div class="footer-mobile" style="padding:0 24px;">
     <img src="images/cognita-mobile-footer.jpg" alt="Cognita Footer" style="width:100%; display:block;">
+  </div>
+</div>
+
+<!-- FLOATING ACTION BUTTONS -->
+<div class="floating-btns">
+  <a href="https://wa.me/6581234567" target="_blank" class="floating-btn floating-btn-whatsapp">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Chat with us
+  </a>
+  <button class="floating-btn floating-btn-enquire" onclick="document.getElementById('popup-form').classList.add('active')">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M4.5 2A2.5 2.5 0 002 4.5v2.006a1 1 0 002 0V4.5a.5.5 0 01.5-.5h2.006a1 1 0 000-2H4.5zm13 0a1 1 0 100 2h2.006a.5.5 0 01.5.5v2.006a1 1 0 102 0V4.5A2.5 2.5 0 0019.506 2H17.5zM12 7a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H8a1 1 0 110-2h3V8a1 1 0 011-1zM3 17.5a1 1 0 012 0v2.006a.5.5 0 00.5.5h2.006a1 1 0 110 2H4.5A2.5 2.5 0 012 19.506V17.5zm19 0a1 1 0 10-2 0v2.006a.5.5 0 01-.5.5h-2.006a1 1 0 100 2h2.006a2.5 2.5 0 002.5-2.5V17.5z"/></svg>
+    Enquire now
+  </button>
+</div>
+
+<!-- POPUP ENQUIRY FORM -->
+<div class="popup-overlay" id="popup-form" onclick="if(event.target===this)this.classList.remove('active')">
+  <div class="popup-content">
+    <button class="popup-close" onclick="document.getElementById('popup-form').classList.remove('active')">&times;</button>
+    <h2 style="color:var(--cognita-blue);">Enquire Now</h2>
+    <p>Tell us about your family's moving plans and we'll connect you with the right school.</p>
+    <form onsubmit="return false;">
+      <div class="form-row">
+        <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your full name"></div>
+        <div class="form-group"><label>Email *</label><input type="email" placeholder="your@email.com"></div>
+      </div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="+65 xxxx xxxx"></div>
+      <div class="form-group"><label>Current Country</label><input type="text" placeholder="Where are you relocating from?"></div>
+      <div class="form-row">
+        <div class="form-group"><label>Destination Country *</label>
+          <select><option value="">Select destination...</option><option>Singapore</option><option>Hong Kong</option><option>Thailand</option><option>Vietnam</option><option>India</option><option>Not yet decided</option></select>
+        </div>
+        <div class="form-group"><label>Relocation Timeline</label>
+          <select><option value="">Select timeline...</option><option>Immediate</option><option>Within 3 months</option><option>Longer than 3 months</option></select>
+        </div>
+      </div>
+      <div class="form-group"><label>Preferred School</label>
+        <select><option value="">Select a school or request consultation...</option><option>Australian International School Singapore</option><option>Brighton College Singapore</option><option>Stamford American International School Singapore</option><option>Stamford American School Hong Kong</option><option>St Andrews International School Dusit</option><option>St Andrews International School Green Valley</option><option>St Andrews International School Sathorn</option><option>St Andrews International School Sukhumvit 107</option><option>ISHCMC</option><option>ISHCMC - American Academy</option><option>CHIREC International School</option><option>Request a consultation to recommend the best pathway</option></select>
+      </div>
+      <button type="submit" class="form-submit">Speak With Our Admissions Team</button>
+    </form>
   </div>
 </div>
 
