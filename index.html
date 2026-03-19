@@ -199,13 +199,17 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
 /* ============================================
    SCHOOL CARDS (Cognita card--white)
    ============================================ */
-.schools-section { padding: 80px 0; background: var(--cognita-white); }
-.country-group { margin-bottom: 56px; }
+.schools-section { padding: 60px 0; background: var(--cognita-white); }
+.country-group { margin-bottom: 40px; }
 .country-heading {
-  font-size: 36px; font-weight: 500; color: var(--cognita-blue); line-height: 47px;
-  margin-bottom: 32px; padding-bottom: 16px; border-bottom: 1px solid var(--cognita-light-grey);
+  font-size: 28px; font-weight: 500; color: var(--cognita-blue); line-height: 36px;
+  margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid var(--cognita-light-grey);
 }
-.school-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 32px; }
+.school-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.back-to-menu { display: block; text-align: center; margin: 32px 0 0; font-size: 15px; font-weight: 600; color: var(--cognita-blue); }
+.back-to-menu:hover { text-decoration: underline; }
+.back-to-top { display: block; text-align: center; margin: 24px 0; font-size: 15px; font-weight: 600; color: var(--cognita-blue); }
+.back-to-top:hover { text-decoration: underline; }
 .school-card {
   background: #fff; border-radius: 6px;
   box-shadow: rgba(16,23,30,0.15) 0px 0px 30px 0px;
@@ -337,7 +341,7 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
   .container { padding: 0 24px; }
   .hero { height: 250px; }
   .hero h1 { font-size: 36px; line-height: 44px; }
-  .school-cards { grid-template-columns: 1fr; }
+  .school-cards { grid-template-columns: 1fr !important; }
   .form-row { grid-template-columns: 1fr; }
   .sub-page-grid { grid-template-columns: 1fr; }
   .text-section ul { columns: 1; }
@@ -352,7 +356,7 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
 }
 </style>
 </head>
-<body>
+<body id="top">
 
 <!-- HEADER: Desktop (screenshot from live cognita.com) -->
 <div class="desktop-header" style="width:100%; background:var(--cognita-dark);">
@@ -448,7 +452,7 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
 
     <!-- SINGAPORE -->
     <div class="country-group" id="singapore">
-      <h2 class="country-heading">Cognita Schools in Singapore</h2>
+      <h2 class="country-heading">Singapore</h2>
       <div class="school-cards">
 
         <div class="school-card">
@@ -458,7 +462,7 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
           <div class="school-card-body">
             <div class="school-card-logo"><img src="images/logos/ais-singapore.webp" alt="AIS Logo"></div>
             <h3 class="school-card-title">Australian International School Singapore</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 2 months to 18 years &bull; Boarding available<br><strong>Curriculum:</strong> Australian, Cambridge IGCSE, IB Diploma, HSC</div>
+            <div class="school-card-meta"><strong>Ages:</strong> 2 months to 18 years &bull; Boarding available<br><strong>Pathway:</strong> Infant Care to Year 12<br><strong>Curriculum:</strong> Australian, Cambridge IGCSE, IB Diploma, HSC</div>
             <p class="school-card-desc">An exceptional IB World School providing education from infant care to Year 12 on a single campus. Known for its welcoming international community of over 50 nationalities, AIS combines academic excellence with a strong focus on wellbeing and personal growth, with 99% of graduates accepted into their first-choice university.</p>
             <div class="school-card-cta"><a href="https://www.ais.com.sg/" class="find-out-more">Find out more</a></div>
           </div>
@@ -471,7 +475,7 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
           <div class="school-card-body">
             <div class="school-card-logo"><img src="images/logos/bcs-singapore.webp" alt="BCS Logo"></div>
             <h3 class="school-card-title">Brighton College Singapore</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 18 months to 18 years<br><strong>Curriculum:</strong> English National Curriculum, IGCSE, A Levels</div>
+            <div class="school-card-meta"><strong>Ages:</strong> 18 months to 18 years<br><strong>Pathway:</strong> Pre-Nursery to Year 13<br><strong>Curriculum:</strong> English National Curriculum, IGCSE, A Levels</div>
             <p class="school-card-desc">An academically ambitious school that fosters a love of learning. Inspired by the heritage and academic tradition of Brighton College in the UK, the school is guided by the values of curiosity, confidence and kindness, with exceptional pastoral care and a rich programme of sport, music and the performing arts.</p>
             <div class="school-card-cta"><a href="https://www.brightoncollege.edu.sg/" class="find-out-more">Find out more</a></div>
           </div>
@@ -484,7 +488,7 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
           <div class="school-card-body">
             <div class="school-card-logo"><img src="images/logos/sais-singapore.webp" alt="SAIS Logo"></div>
             <h3 class="school-card-title">Stamford American International School</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 18 months to 18 years &bull; Boarding available<br><strong>Curriculum:</strong> American Curriculum, IB (PYP, MYP, DP)</div>
+            <div class="school-card-meta"><strong>Ages:</strong> 18 months to 18 years &bull; Boarding available<br><strong>Pathway:</strong> Infant Care to Grade 12<br><strong>Curriculum:</strong> American Curriculum, IB (PYP, MYP, DP)</div>
             <p class="school-card-desc">A fully international education from early years through high school, empowering students to create their unique future. An IB World School accredited by CIS and WASC with a rich and flexible curriculum, welcoming more than 75 nationalities.</p>
             <div class="school-card-cta"><a href="https://www.sais.edu.sg/" class="find-out-more">Find out more</a></div>
           </div>
@@ -493,9 +497,9 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
       </div>
     </div>
 
-    <!-- HONG KONG -->
+    <!-- HONG KONG & THAILAND -->
     <div class="country-group" id="hong-kong">
-      <h2 class="country-heading">Cognita Schools in Hong Kong</h2>
+      <h2 class="country-heading"><span id="thailand"></span>Hong Kong &amp; Thailand</h2>
       <div class="school-cards">
         <div class="school-card">
           <div class="school-card-image">
@@ -504,24 +508,17 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
           <div class="school-card-body">
             <div class="school-card-logo"><img src="images/logos/sas-hong-kong.webp" alt="SAS HK Logo"></div>
             <h3 class="school-card-title">Stamford American School Hong Kong</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 5 to 18 years<br><strong>Curriculum:</strong> American Curriculum, International Baccalaureate</div>
+            <div class="school-card-meta"><strong>Ages:</strong> 5 to 18 years<br><strong>Pathway:</strong> KG2 to Grade 12<br><strong>Curriculum:</strong> American Curriculum, International Baccalaureate</div>
             <p class="school-card-desc">A world-class international education blending rigorous American standards with an innovative, inquiry-based learning approach. Students choose from three graduation pathways: the full IB Diploma, select IB courses, or the Stamford American High School Diploma.</p>
             <div class="school-card-cta"><a href="https://www.sais.edu.hk/" class="find-out-more">Find out more</a></div>
           </div>
         </div>
-      </div>
-    </div>
-
-    <!-- THAILAND -->
-    <div class="country-group" id="thailand">
-      <h2 class="country-heading">Cognita Schools in Thailand</h2>
-      <div class="school-cards">
         <div class="school-card">
           <div class="school-card-image"><img src="images/schools/st-andrews-dusit.webp" alt="St Andrews Dusit"></div>
           <div class="school-card-body">
             <div class="school-card-logo"><img src="images/logos/st-andrews-dusit.webp" alt="St Andrews Dusit Logo"></div>
             <h3 class="school-card-title">St Andrews International School Dusit</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 2 to 11 years<br><strong>Curriculum:</strong> English National Curriculum</div>
+            <div class="school-card-meta"><strong>Ages:</strong> 2 to 11 years<br><strong>Pathway:</strong> Pre-Nursery to Year 6<br><strong>Curriculum:</strong> English National Curriculum</div>
             <p class="school-card-desc">A small, inclusive primary school in central Bangkok, recognised as Cognita Asia's School of the Year. Empowers curious individuals through an engaging British curriculum, enrichment clubs, student leadership and sustainability initiatives.</p>
             <div class="school-card-cta"><a href="https://www.standrewsdusit.com/" class="find-out-more">Find out more</a></div>
           </div>
@@ -531,17 +528,24 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
           <div class="school-card-body">
             <div class="school-card-logo"><img src="images/logos/st-andrews-green-valley.webp" alt="St Andrews GV Logo"></div>
             <h3 class="school-card-title">St Andrews International School Green Valley</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 2 to 18 years<br><strong>Curriculum:</strong> English National Curriculum, IGCSEs, IB Diploma</div>
+            <div class="school-card-meta"><strong>Ages:</strong> 2 to 18 years<br><strong>Pathway:</strong> Pre-Nursery to Year 13<br><strong>Curriculum:</strong> English National Curriculum, IGCSEs, IB Diploma</div>
             <p class="school-card-desc">Set on a spacious 80-acre tropical estate in Rayong. Known for outdoor learning philosophy, elite sports facilities including an 8-lane pool and equestrian centre, welcoming students from 35 nationalities.</p>
             <div class="school-card-cta"><a href="https://www.standrewsgreenvalley.com/" class="find-out-more">Find out more</a></div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- THAILAND (continued) & INDIA -->
+    <div class="country-group" id="india">
+      <h2 class="country-heading">Thailand &amp; India</h2>
+      <div class="school-cards">
         <div class="school-card">
           <div class="school-card-image"><img src="images/schools/st-andrews-sathorn.webp" alt="St Andrews Sathorn"></div>
           <div class="school-card-body">
             <div class="school-card-logo"><img src="images/logos/st-andrews-sathorn.webp" alt="St Andrews Sathorn Logo"></div>
             <h3 class="school-card-title">St Andrews International School Sathorn</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 2 to 11 years<br><strong>Curriculum:</strong> English National Curriculum</div>
+            <div class="school-card-meta"><strong>Ages:</strong> 2 to 11 years<br><strong>Pathway:</strong> Nursery to Year 6<br><strong>Curriculum:</strong> English National Curriculum</div>
             <p class="school-card-desc">A primary-focused campus in central Bangkok, providing a caring British education that recognises each child's individual needs. Part of the Cognita family, benefiting from shared resources and a supportive, tolerant community.</p>
             <div class="school-card-cta"><a href="https://www.standrewssathorn.com/" class="find-out-more">Find out more</a></div>
           </div>
@@ -551,9 +555,19 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
           <div class="school-card-body">
             <div class="school-card-logo"><img src="images/logos/st-andrews-sukhumvit-107.webp" alt="St Andrews Sukhumvit Logo"></div>
             <h3 class="school-card-title">St Andrews International School Sukhumvit 107</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 2 to 18 years<br><strong>Curriculum:</strong> English National Curriculum, IGCSEs, IB Diploma</div>
+            <div class="school-card-meta"><strong>Ages:</strong> 2 to 18 years<br><strong>Pathway:</strong> Nursery to Year 13<br><strong>Curriculum:</strong> English National Curriculum, IGCSEs, IB Diploma</div>
             <p class="school-card-desc">Provides a holistic British education integrated with the IB Primary Years Programme and IB Diploma. Fosters critical thinking, creativity and a global outlook across a diverse community of over 55 nationalities.</p>
             <div class="school-card-cta"><a href="https://www.standrewssukhumvit.com/" class="find-out-more">Find out more</a></div>
+          </div>
+        </div>
+        <div class="school-card">
+          <div class="school-card-image"><img src="images/schools/chirec-india.webp" alt="CHIREC International School"></div>
+          <div class="school-card-body">
+            <div class="school-card-logo"><img src="images/logos/chirec-india.webp" alt="CHIREC Logo"></div>
+            <h3 class="school-card-title">CHIREC International School</h3>
+            <div class="school-card-meta"><strong>Ages:</strong> 18 months to 18 years<br><strong>Pathway:</strong> Nursery to Grade 12<br><strong>Curriculum:</strong> CBSE, Cambridge, IB Diploma, IB Career-related</div>
+            <p class="school-card-desc">Consistently ranked among the top schools in India, with over 35 years of experience educating the whole child. Combines innovative teaching with a focus on ethics, character building and academic excellence across three campuses, with a 1:13 student-teacher ratio.</p>
+            <div class="school-card-cta"><a href="https://www.chirec.ac.in/" class="find-out-more">Find out more</a></div>
           </div>
         </div>
       </div>
@@ -561,14 +575,14 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
 
     <!-- VIETNAM -->
     <div class="country-group" id="vietnam">
-      <h2 class="country-heading">Cognita Schools in Vietnam</h2>
+      <h2 class="country-heading">Vietnam</h2>
       <div class="school-cards">
         <div class="school-card">
           <div class="school-card-image"><img src="images/schools/ishcmc-vietnam.webp" alt="ISHCMC"></div>
           <div class="school-card-body">
             <div class="school-card-logo"><img src="images/logos/ishcmc-vietnam.webp" alt="ISHCMC Logo"></div>
             <h3 class="school-card-title">International School Ho Chi Minh City (ISHCMC)</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 2 to 18 years<br><strong>Curriculum:</strong> International Baccalaureate (PYP, MYP, DP)</div>
+            <div class="school-card-meta"><strong>Ages:</strong> 2 to 18 years<br><strong>Pathway:</strong> Early Explorers to Grade 12<br><strong>Curriculum:</strong> International Baccalaureate (PYP, MYP, DP)</div>
             <p class="school-card-desc">Ho Chi Minh City's first international school, with over 30 years of experience. As a full IB World School, ISHCMC serves students from 60+ nationalities. 98% of graduates are accepted to their top-choice university, earning over $56 million USD in scholarships.</p>
             <div class="school-card-cta"><a href="https://www.ishcmc.com/" class="find-out-more">Find out more</a></div>
           </div>
@@ -578,7 +592,7 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
           <div class="school-card-body">
             <div class="school-card-logo"><img src="images/logos/ishcmc-american-academy.webp" alt="ISHCMC AA Logo"></div>
             <h3 class="school-card-title">ISHCMC - American Academy</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 11 to 18 years (Grade 6 to Grade 12)<br><strong>Curriculum:</strong> American Curriculum, AP, Syracuse University SUPA</div>
+            <div class="school-card-meta"><strong>Ages:</strong> 11 to 18 years<br><strong>Pathway:</strong> Grade 6 to Grade 12<br><strong>Curriculum:</strong> American Curriculum, AP, Syracuse University SUPA</div>
             <p class="school-card-desc">The first high school in Vietnam to offer Advanced Placement (AP) and Syracuse University (SUPA) credits. A 100% English-language curriculum combined with Vietnamese language studies, empowering students for competitive university applications worldwide.</p>
             <div class="school-card-cta"><a href="https://www.aavn.edu.vn/" class="find-out-more">Find out more</a></div>
           </div>
@@ -586,23 +600,40 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
       </div>
     </div>
 
-    <!-- INDIA -->
-    <div class="country-group" id="india">
-      <h2 class="country-heading">Cognita Schools in India</h2>
-      <div class="school-cards">
-        <div class="school-card">
-          <div class="school-card-image"><img src="images/schools/chirec-india.webp" alt="CHIREC International School"></div>
-          <div class="school-card-body">
-            <div class="school-card-logo"><img src="images/logos/chirec-india.webp" alt="CHIREC Logo"></div>
-            <h3 class="school-card-title">CHIREC International School</h3>
-            <div class="school-card-meta"><strong>Ages:</strong> 2.5 to 18 years<br><strong>Curriculum:</strong> CBSE, Cambridge (CAIE), IB Diploma, IB Career-related</div>
-            <p class="school-card-desc">Consistently ranked among the top schools in India, with over 35 years of experience educating the whole child. Combines innovative teaching with a focus on ethics, character building and academic excellence across three campuses, with a 1:13 student-teacher ratio.</p>
-            <div class="school-card-cta"><a href="https://www.chirec.ac.in/" class="find-out-more">Find out more</a></div>
+    <a href="#schools" class="back-to-menu">Back to country menu</a>
+
+  </div>
+</section>
+
+<!-- ENQUIRY FORM (moved up after schools) -->
+<section class="enquiry-section" id="enquiry">
+  <div class="container">
+    <div class="enquiry-grid">
+      <div class="enquiry-text">
+        <h2 class="h2-underline">Relocating to Asia? Let Us Help</h2>
+        <p>To better support relocating families, please share your details below. Our admissions team will provide tailored guidance for your family's needs.</p>
+      </div>
+      <form class="enquiry-form" onsubmit="return false;">
+        <div class="form-row">
+          <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your full name"></div>
+          <div class="form-group"><label>Email *</label><input type="email" placeholder="your@email.com"></div>
+        </div>
+        <div class="form-group"><label>Phone</label><input type="tel" placeholder="+65 xxxx xxxx"></div>
+        <div class="form-group"><label>Current Country</label><input type="text" placeholder="Where are you relocating from?"></div>
+        <div class="form-row">
+          <div class="form-group"><label>Destination Country *</label>
+            <select><option value="">Select destination...</option><option>Singapore</option><option>Hong Kong</option><option>Thailand</option><option>Vietnam</option><option>India</option><option>Not yet decided</option></select>
+          </div>
+          <div class="form-group"><label>Relocation Timeline</label>
+            <select><option value="">Select timeline...</option><option>Immediate</option><option>Within 3 months</option><option>Longer than 3 months</option></select>
           </div>
         </div>
-      </div>
+        <div class="form-group"><label>Preferred School</label>
+          <select><option value="">Select a school or request consultation...</option><option>Australian International School Singapore</option><option>Brighton College Singapore</option><option>Stamford American International School Singapore</option><option>Stamford American School Hong Kong</option><option>St Andrews International School Dusit</option><option>St Andrews International School Green Valley</option><option>St Andrews International School Sathorn</option><option>St Andrews International School Sukhumvit 107</option><option>ISHCMC</option><option>ISHCMC - American Academy</option><option>CHIREC International School</option><option>Request a consultation to recommend the best pathway</option></select>
+        </div>
+        <button type="submit" class="form-submit">Speak With Our Admissions Team</button>
+      </form>
     </div>
-
   </div>
 </section>
 
@@ -669,38 +700,6 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
   </div>
 </section>
 
-<!-- ENQUIRY FORM -->
-<section class="enquiry-section" id="enquiry">
-  <div class="container">
-    <div class="enquiry-grid">
-      <div class="enquiry-text">
-        <h2 class="h2-underline">Relocating to Asia? Let Us Help</h2>
-        <p>To better support relocating families, please share your details below. Our admissions team will provide tailored guidance for your family's needs.</p>
-      </div>
-      <form class="enquiry-form" onsubmit="return false;">
-        <div class="form-row">
-          <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your full name"></div>
-          <div class="form-group"><label>Email *</label><input type="email" placeholder="your@email.com"></div>
-        </div>
-        <div class="form-group"><label>Phone</label><input type="tel" placeholder="+65 xxxx xxxx"></div>
-        <div class="form-group"><label>Current Country</label><input type="text" placeholder="Where are you relocating from?"></div>
-        <div class="form-row">
-          <div class="form-group"><label>Destination Country *</label>
-            <select><option value="">Select destination...</option><option>Singapore</option><option>Hong Kong</option><option>Thailand</option><option>Vietnam</option><option>India</option><option>Not yet decided</option></select>
-          </div>
-          <div class="form-group"><label>Relocation Timeline</label>
-            <select><option value="">Select timeline...</option><option>Immediate</option><option>Within 3 months</option><option>Longer than 3 months</option></select>
-          </div>
-        </div>
-        <div class="form-group"><label>Preferred School</label>
-          <select><option value="">Select a school or request consultation...</option><option>Australian International School Singapore</option><option>Brighton College Singapore</option><option>Stamford American International School Singapore</option><option>Stamford American School Hong Kong</option><option>St Andrews International School Dusit</option><option>St Andrews International School Green Valley</option><option>St Andrews International School Sathorn</option><option>St Andrews International School Sukhumvit 107</option><option>ISHCMC</option><option>ISHCMC - American Academy</option><option>CHIREC International School</option><option>Request a consultation to recommend the best pathway</option></select>
-        </div>
-        <button type="submit" class="form-submit">Speak With Our Admissions Team</button>
-      </form>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section class="faq-section">
   <div class="container">
@@ -727,17 +726,7 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
   </div>
 </section>
 
-<!-- SUB-PAGE LINKS -->
-<div class="sub-page-links">
-  <div class="container">
-    <div class="sub-page-grid">
-      <a href="https://www.cognita.com/school-finder/" class="sub-page-link">School Finder</a>
-      <a href="https://www.cognita.com/our-schools/student-stories/" class="sub-page-link">Student Stories</a>
-      <a href="https://www.cognita.com/our-schools/parent-stories/" class="sub-page-link">Parent Stories</a>
-      <a href="https://www.cognita.com/our-schools/teacher-stories/" class="sub-page-link">Teacher Stories</a>
-    </div>
-  </div>
-</div>
+<a href="#top" class="back-to-top">Back to top</a>
 
 <!-- FOOTER (Screenshots from live cognita.com) -->
 <div style="background:#162D39; padding:60px 0 40px;">
