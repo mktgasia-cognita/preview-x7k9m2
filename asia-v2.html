@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Relocating to Asia? International Schools Across Asia | Cognita</title>
+<meta name="description" content="Families relocating to Asia can transition smoothly into one of Cognita's leading international schools across Singapore, Hong Kong, Thailand, Vietnam and India. Our admissions teams support mid-year transfers and help students settle quickly.">
+<style>
+/* FS Lucas Pro - @font-face declarations */
+@font-face {
+  font-family: 'FS Lucas';
+  src: url('fonts/fs-lucas-pro/FSLucasPro-Regular.woff2') format('woff2'),
+       url('fonts/fs-lucas-pro/FSLucasPro-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FS Lucas';
+  src: url('fonts/fs-lucas-pro/FSLucasPro-Med.woff2') format('woff2'),
+       url('fonts/fs-lucas-pro/FSLucasPro-Med.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FS Lucas';
+  src: url('fonts/fs-lucas-pro/FSLucasPro-SemiBd.woff2') format('woff2'),
+       url('fonts/fs-lucas-pro/FSLucasPro-SemiBd.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FS Lucas';
+  src: url('fonts/fs-lucas-pro/FSLucasPro-Bold.woff2') format('woff2'),
+       url('fonts/fs-lucas-pro/FSLucasPro-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'FS Lucas';
+  src: url('fonts/fs-lucas-pro/FSLucasPro-Italic.woff2') format('woff2'),
+       url('fonts/fs-lucas-pro/FSLucasPro-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* ============================================
+   COGNITA WORDPRESS THEME - Asia Landing Page v2
+   Consolidated content with GEO summary panel
+   ============================================ */
+:root {
+  --cognita-blue: #006EB6;
+  --cognita-dark: #152D39;
+  --cognita-teal: #4EC3A3;
+  --cognita-light-blue: #E4F0F7;
+  --cognita-light-grey: #EDEDED;
+  --cognita-text: #10171E;
+  --cognita-text-light: #3C444F;
+  --cognita-white: #FFFFFF;
+  --font-main: 'FS Lucas', Arial, sans-serif;
+  --max-width: 1320px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-main); color: var(--cognita-text); line-height: 24px; font-size: 16px; font-weight: 500; font-style: normal; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--cognita-blue); text-decoration: none; }
+p { font-size: 18px; line-height: 28px; margin-bottom: 16px; font-weight: 500; font-style: normal; }
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 80px; }
+h2 { font-family: var(--font-main); font-size: 36px; font-weight: 500; color: var(--cognita-blue); line-height: 47px; margin-bottom: 16px; }
+h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: var(--cognita-blue); line-height: 32px; margin-bottom: 8px; }
+.h2-underline { position: relative; display: inline-block; }
+.h2-underline::after { content: ''; display: block; width: 100%; height: 3px; background: var(--cognita-blue); margin-top: 6px; }
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  position: relative;
+  height: 390px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('https://www.cognita.com/wp-content/uploads/sites/10/2024/02/20_b73d83.png') center/cover no-repeat;
+}
+.hero .container { position: relative; z-index: 2; width: 100%; }
+.hero h1 {
+  font-family: var(--font-main);
+  font-size: 64px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 80px;
+  max-width: 600px;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 40px 8px 30px;
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid var(--cognita-blue);
+  background: transparent;
+  color: var(--cognita-blue);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.25s;
+  text-decoration: none;
+}
+.btn:hover { background: var(--cognita-blue); color: #fff; }
+.btn-white { border-color: #fff; color: #fff; }
+.btn-white:hover { background: #fff; color: var(--cognita-dark); }
+
+/* ============================================
+   GEO SUMMARY PANEL
+   ============================================ */
+.geo-panel {
+  background: var(--cognita-light-blue);
+  padding: 56px 0;
+}
+.geo-panel-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.geo-panel h2 {
+  grid-column: 1 / -1;
+  margin-bottom: 4px;
+}
+.geo-panel .geo-intro {
+  grid-column: 1 / -1;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--cognita-text);
+  margin-bottom: 8px;
+}
+.geo-col h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--cognita-dark);
+  margin-bottom: 12px;
+  line-height: 28px;
+}
+.geo-col ul {
+  list-style: none;
+  margin: 0;
+}
+.geo-col ul li {
+  padding: 8px 0 8px 28px;
+  position: relative;
+  font-size: 17px;
+  line-height: 26px;
+  color: var(--cognita-text-light);
+}
+.geo-col ul li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  color: var(--cognita-teal);
+  font-weight: 700;
+  font-size: 17px;
+}
+.geo-cognita-callout {
+  background: var(--cognita-white);
+  border-radius: 6px;
+  padding: 28px 28px 20px;
+  border-left: 4px solid var(--cognita-teal);
+}
+.geo-cognita-callout h3 {
+  color: var(--cognita-blue);
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.geo-cognita-callout p {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--cognita-text-light);
+  margin-bottom: 12px;
+}
+.geo-cognita-callout ul {
+  list-style: none;
+  margin: 0;
+}
+.geo-cognita-callout ul li {
+  padding: 6px 0 6px 24px;
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--cognita-text-light);
+}
+.geo-cognita-callout ul li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  color: var(--cognita-teal);
+  font-weight: 700;
+  font-size: 16px;
+}
+.geo-cta {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+/* ============================================
+   TWO-COLUMN BLOCKS
+   ============================================ */
+.two-col {
+  padding: 80px 0;
+}
+.two-col .container {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+}
+.two-col .container > div {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.two-col.reverse .container { flex-direction: row-reverse; }
+.circle-img {
+  width: 355px;
+  height: 355px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid var(--cognita-teal);
+  margin: 0 auto;
+}
+.rect-img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.two-col ul {
+  list-style: none;
+  margin: 16px 0;
+}
+.two-col ul li {
+  padding: 6px 0 6px 28px;
+  position: relative;
+  font-size: 18px;
+  line-height: 28px;
+}
+.two-col ul li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  color: var(--cognita-teal);
+  font-weight: 700;
+  font-size: 18px;
+}
+.two-col.bg-light-blue { background: var(--cognita-light-blue); }
+.two-col.bg-dark { background: var(--cognita-dark); color: #fff; }
+.two-col.bg-dark h2 { color: #fff; }
+.two-col.bg-dark .h2-underline::after { background: var(--cognita-teal); }
+.two-col.bg-dark p { color: rgba(255,255,255,0.85); }
+.two-col.bg-dark ul li { color: rgba(255,255,255,0.9); }
+.two-col.bg-dark ul li::before { color: var(--cognita-teal); }
+
+/* ============================================
+   JUMP LINKS
+   ============================================ */
+.jump-links { background: var(--cognita-white); padding: 24px 0; border-bottom: 1px solid #e0e0e0; }
+.jump-links .container { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.jump-links-label { font-weight: 700; font-size: 15px; color: var(--cognita-text-light); margin-right: 16px; }
+.jump-links a {
+  font-size: 16px; font-weight: 600; color: var(--cognita-blue);
+  padding: 8px 20px; border: 1px solid var(--cognita-blue); border-radius: 20px; transition: all 0.2s;
+}
+.jump-links a:hover { background: var(--cognita-blue); color: #fff; }
+
+/* ============================================
+   SCHOOL CARDS
+   ============================================ */
+.schools-section { padding: 60px 0; background: var(--cognita-white); }
+.school-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.country-label {
+  font-family: var(--font-main); font-size: 22px; font-weight: 600; color: var(--cognita-blue);
+  padding-bottom: 8px; border-bottom: 2px solid var(--cognita-blue); margin-bottom: 0; align-self: end;
+}
+.col-1 { grid-column: 1; }
+.col-2 { grid-column: 2; }
+.col-3 { grid-column: 3; }
+.col-1-3 { grid-column: 1 / -1; }
+.col-1-2 { grid-column: 1 / 3; }
+.col-2-3 { grid-column: 2 / 4; }
+.back-to-menu { display: block; text-align: center; margin: 32px 0 0; font-size: 15px; font-weight: 600; color: var(--cognita-blue); }
+.back-to-menu:hover { text-decoration: underline; }
+.back-to-top { display: block; text-align: center; margin: 24px 0; font-size: 15px; font-weight: 600; color: var(--cognita-blue); }
+.back-to-top:hover { text-decoration: underline; }
+
+/* Floating action buttons */
+.floating-btns { position: fixed; right: 24px; top: calc(50% - 40px); transform: translateY(-50%); z-index: 900; display: flex; flex-direction: column; gap: 10px; }
+.floating-btn {
+  display: flex; align-items: center; gap: 10px; padding: 12px 24px 12px 18px;
+  border-radius: 30px; font-family: var(--font-main); font-size: 15px; font-weight: 600;
+  color: #fff; text-decoration: none; cursor: pointer; border: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2); transition: transform 0.2s, box-shadow 0.2s;
+}
+.floating-btn:hover { transform: scale(1.05); box-shadow: 0 6px 24px rgba(0,0,0,0.3); }
+.floating-btn svg { width: 22px; height: 22px; flex-shrink: 0; }
+.floating-btn-whatsapp { background: #25D366; }
+.floating-btn-enquire { background: var(--cognita-blue); }
+
+/* Popup overlay */
+.popup-overlay {
+  display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6);
+  z-index: 1000; align-items: center; justify-content: center;
+}
+.popup-overlay.active { display: flex; }
+.popup-content {
+  background: #fff; border-radius: 8px; padding: 40px; max-width: 560px; width: 90%;
+  max-height: 90vh; overflow-y: auto; position: relative;
+}
+.popup-close {
+  position: absolute; top: 12px; right: 16px; background: none; border: none;
+  font-size: 28px; cursor: pointer; color: var(--cognita-text-light); line-height: 1;
+}
+.popup-close:hover { color: var(--cognita-text); }
+.popup-content h2 { font-size: 28px; margin-bottom: 8px; }
+.popup-content p { font-size: 16px; margin-bottom: 20px; color: var(--cognita-text-light); }
+.popup-content .form-group { margin-bottom: 16px; }
+.popup-content label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 4px; color: var(--cognita-text); }
+.popup-content input, .popup-content select {
+  width: 100%; padding: 10px 14px; border: 1px solid #d0d0d0; border-radius: 4px;
+  font-family: var(--font-main); font-size: 15px;
+}
+.popup-content .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.popup-content .form-submit {
+  width: 100%; padding: 14px; background: var(--cognita-blue); color: #fff;
+  border: none; border-radius: 4px; font-family: var(--font-main); font-size: 16px;
+  font-weight: 600; cursor: pointer; margin-top: 8px;
+}
+.popup-content .form-submit:hover { background: #005a96; }
+.school-card {
+  background: #fff; border-radius: 6px;
+  box-shadow: rgba(16,23,30,0.15) 0px 0px 30px 0px;
+  overflow: hidden; transition: box-shadow 0.3s, transform 0.2s;
+  display: flex; flex-direction: column;
+}
+.school-card:hover { box-shadow: rgba(16,23,30,0.25) 0px 0px 40px 0px; transform: translateY(-2px); }
+.school-card-image { height: 200px; overflow: hidden; background: var(--cognita-light-grey); }
+.school-card-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px 6px 0 0; }
+.school-card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; }
+.school-card-logo { height: 40px; margin-bottom: 10px; }
+.school-card-logo img { height: 100%; width: auto; object-fit: contain; }
+.school-card-title { font-size: 20px; font-weight: 500; color: var(--cognita-blue); margin-bottom: 6px; line-height: 26px; }
+.school-card-meta { font-size: 14px; color: var(--cognita-text-light); margin-bottom: 8px; line-height: 20px; }
+.school-card-meta strong { color: var(--cognita-text); }
+.school-card-desc {
+  font-size: 16px; color: var(--cognita-text-light); line-height: 24px;
+  margin-bottom: 16px; flex: 1;
+}
+.school-card-cta { padding-top: 12px; margin-top: auto; }
+.find-out-more {
+  color: var(--cognita-blue); font-size: 16px; font-weight: 600;
+  border: 1px solid var(--cognita-blue); border-radius: 20px;
+  padding: 8px 40px 8px 30px; display: inline-block; transition: all 0.2s;
+}
+.find-out-more:hover { background: var(--cognita-blue); color: #fff; }
+
+/* ============================================
+   FULL-WIDTH TEXT SECTIONS
+   ============================================ */
+.text-section { padding: 80px 0; }
+.text-section.bg-light-blue { background: var(--cognita-light-blue); }
+.text-section.bg-grey { background: var(--cognita-light-grey); }
+.text-section ul { list-style: none; margin: 16px 0; columns: 2; column-gap: 32px; }
+.text-section ul li {
+  padding: 10px 0 10px 18px; position: relative; font-size: 18px; line-height: 28px;
+  border-bottom: 1px solid rgba(0,110,182,0.1); break-inside: avoid;
+}
+.text-section ul li::before { content: '\2022'; position: absolute; left: 0; color: var(--cognita-blue); font-weight: 700; }
+
+/* ============================================
+   ENQUIRY FORM
+   ============================================ */
+.enquiry-section { padding: 80px 0; background: var(--cognita-dark); color: #fff; position: relative; overflow: hidden; }
+.enquiry-bg { position: absolute; inset: 0; background: url('images/mask-group-3-2x.webp') center/cover no-repeat; opacity: 0.15; }
+.enquiry-section .container { position: relative; z-index: 2; }
+.enquiry-section h2 { color: #fff; }
+.enquiry-section .h2-underline::after { background: var(--cognita-teal); }
+.enquiry-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.enquiry-image { border-radius: 6px; overflow: hidden; }
+.enquiry-image img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; }
+.enquiry-text p { color: rgba(255,255,255,0.85); }
+.enquiry-form { background: #fff; padding: 32px; border-radius: 6px; color: var(--cognita-text); }
+.form-group { margin-bottom: 16px; }
+.form-group label { display: block; font-size: 14px; font-weight: 700; margin-bottom: 6px; color: var(--cognita-dark); }
+.form-group input, .form-group select {
+  width: 100%; padding: 10px 14px; border: 1px solid #ccc;
+  font-family: var(--font-main); font-size: 16px; border-radius: 4px; background: #fff;
+}
+.form-group input:focus, .form-group select:focus { outline: none; border-color: var(--cognita-blue); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-submit {
+  width: 100%; padding: 12px; background: var(--cognita-blue); color: #fff;
+  font-family: var(--font-main); font-size: 16px; font-weight: 600;
+  border: none; border-radius: 20px; cursor: pointer; margin-top: 8px;
+}
+.form-submit:hover { background: #005a96; }
+
+/* ============================================
+   FAQ
+   ============================================ */
+.faq-section { padding: 80px 0; background: var(--cognita-light-grey); }
+.faq-grid { max-width: 800px; margin: 32px auto 0; }
+.faq-item { background: #fff; margin-bottom: 2px; }
+.faq-item h3 { font-size: 18px; line-height: 28px; margin: 0; }
+.faq-question {
+  width: 100%; text-align: left; padding: 20px 48px 20px 24px;
+  background: none; border: none; font-family: var(--font-main);
+  font-size: 18px; font-weight: 700; color: var(--cognita-dark);
+  cursor: pointer; position: relative; line-height: 28px;
+}
+.faq-question:hover { background: var(--cognita-light-blue); }
+.faq-question::after { content: '+'; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); font-size: 24px; color: var(--cognita-blue); font-weight: 300; }
+.faq-item.open .faq-question::after { content: '\2212'; }
+.faq-answer { display: none; padding: 0 24px 20px; color: var(--cognita-text-light); font-size: 18px; line-height: 28px; }
+.faq-item.open .faq-answer { display: block; }
+
+/* ============================================
+   FINAL CTA / SUB-PAGE LINKS
+   ============================================ */
+.final-cta { padding: 80px 0; background: var(--cognita-dark); text-align: center; color: #fff; }
+.final-cta h2 { color: #fff; }
+.final-cta p { color: rgba(255,255,255,0.85); max-width: 600px; margin: 0 auto 32px; }
+
+/* Footer responsive */
+.footer-mobile { display: none; }
+.footer-desktop { display: block; }
+.mobile-header { display: none; }
+
+/* Mock badge */
+.mock-badge { position: fixed; top: 0; left: 50%; transform: translateX(-50%); background: #FF6B35; color: #fff; padding: 6px 20px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; z-index: 9999; }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .container { padding: 0 40px; }
+  .two-col .container { flex-direction: column; }
+  .two-col .container > div { width: 100%; flex: 0 0 auto; }
+  .two-col.reverse .container { flex-direction: column; }
+  .enquiry-grid { grid-template-columns: 1fr; }
+  .geo-panel-inner { grid-template-columns: 1fr; }
+  .geo-cognita-callout { margin-top: 8px; }
+}
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
+  .hero { height: 250px; }
+  .hero h1 { font-size: 36px; line-height: 44px; }
+  .school-grid { grid-template-columns: 1fr !important; }
+  .country-label { grid-column: 1 !important; }
+  .form-row { grid-template-columns: 1fr; }
+  .text-section ul { columns: 1; }
+  .circle-img { width: 250px; height: 250px; }
+  .rect-img { width: 100%; }
+  h2 { font-size: 28px; line-height: 36px; }
+  .desktop-header { display: none; }
+  .mobile-header { display: block; }
+  .footer-desktop { display: none !important; }
+  .footer-mobile { display: block !important; }
+  .geo-panel { padding: 40px 0; }
+}
+</style>
+</head>
+<body id="top">
+
+<!-- HEADER: Desktop -->
+<div class="desktop-header" style="width:100%; background:var(--cognita-dark);">
+  <img src="images/cognita-header.png" alt="Cognita Navigation" style="width:100%; display:block; max-height:110px; object-fit:cover; object-position:top;">
+</div>
+<!-- HEADER: Mobile -->
+<div class="mobile-header" style="width:100%;">
+  <img src="images/cognita-mobile-header.png" alt="Cognita Mobile Navigation" style="width:100%; display:block;">
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <h1>Relocating to Asia?</h1>
+  </div>
+</section>
+
+<!-- GEO SUMMARY PANEL (replaces old intro block + global network block) -->
+<section class="geo-panel">
+  <div class="container">
+    <div class="geo-panel-inner">
+      <h2 class="h2-underline">Your Child's Next School in Asia</h2>
+      <p class="geo-intro">Cognita is a global education group operating 11 international schools across Singapore, Hong Kong, Thailand, Vietnam and India. Our schools offer internationally recognised curricula including the IB, British, American and Australian pathways, from early years through to Grade 12.</p>
+
+      <!-- Left column: all relocating families (75%) -->
+      <div class="geo-col">
+        <h3>How we support relocating families</h3>
+        <ul>
+          <li>Admissions teams experienced in supporting families relocating to Asia at short notice</li>
+          <li>Mid-year and mid-term enrolment available - students can join within weeks of applying</li>
+          <li>Multiple curriculum pathways to match your child's previous schooling and future goals</li>
+          <li>English language support available for students who need it</li>
+          <li>Schools across five countries, giving families genuine choice of city, lifestyle and educational approach</li>
+          <li>A global school network across Asia, Europe and the UK, so if your family moves again, transitions between Cognita schools are straightforward</li>
+        </ul>
+      </div>
+
+      <!-- Right column: existing Cognita families (25%) -->
+      <div class="geo-col">
+        <div class="geo-cognita-callout">
+          <h3>Already at a Cognita school?</h3>
+          <p>Transferring within the Cognita network is designed to be seamless:</p>
+          <ul>
+            <li>No new application form - our admissions teams handle the paperwork on your behalf</li>
+            <li>Assessments minimised or waived, with school reports accepted in place of formal testing</li>
+            <li>Application and enrolment fees waived</li>
+            <li>Tuition fees already paid are prorated and transferred to your new school</li>
+            <li>A dedicated admissions concierge coordinates directly between your current and new school</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="geo-cta">
+        <a href="#enquiry" class="btn">Speak with an Admissions Advisor</a>
+        <a href="#schools" class="btn">Explore Our Schools</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY FAMILIES CHOOSE ASIA (kept as-is) -->
+<section class="two-col">
+  <div class="container">
+    <div>
+      <h2 class="h2-underline">Why Families Choose Asia</h2>
+      <p>Asia is home to some of the world's most dynamic cities and international communities. Families relocating here benefit from:</p>
+      <ul>
+        <li>Safe and vibrant global cities with excellent infrastructure</li>
+        <li>World-class healthcare systems</li>
+        <li>Strong international business hubs across Singapore, Hong Kong, Bangkok and Ho Chi Minh City</li>
+        <li>Internationally recognised education systems and qualifications</li>
+        <li>Rich cultural experiences and year-round outdoor lifestyles</li>
+      </ul>
+    </div>
+    <div>
+      <img src="https://www.cognita.com/wp-content/uploads/sites/10/2024/02/DOWNSEND_GENESIS_LR-113-e1707155748911.jpg" alt="International school students" class="rect-img">
+    </div>
+  </div>
+</section>
+
+<!-- JUMP LINKS -->
+<div class="jump-links" id="schools">
+  <div class="container">
+    <span class="jump-links-label">Cognita Asia Schools:</span>
+    <a href="#singapore">Singapore</a>
+    <a href="#hong-kong">Hong Kong</a>
+    <a href="#thailand">Thailand</a>
+    <a href="#india">India</a>
+    <a href="#vietnam">Vietnam</a>
+  </div>
+</div>
+
+<!-- SCHOOLS SECTION (kept as-is) -->
+<section class="schools-section">
+  <div class="container">
+    <div class="school-grid">
+
+      <!-- Singapore -->
+      <h3 class="country-label col-1-3" id="singapore">Singapore</h3>
+
+      <div class="school-card">
+        <div class="school-card-image">
+          <img src="images/schools/ais-singapore.webp" alt="Australian International School Singapore">
+        </div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/ais-singapore.webp" alt="AIS Logo"></div>
+          <h3 class="school-card-title">Australian International School (Singapore)</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 2 months to 18 years &bull; Boarding available<br><strong>Pathway:</strong> Infant Care to Year 12<br><strong>Curriculum:</strong> Australian, Cambridge IGCSE, IB Diploma, HSC</div>
+          <p class="school-card-desc">An exceptional IB World School providing education from infant care to Year 12 on a single campus. Known for its welcoming international community of over 50 nationalities, AIS combines academic excellence with a strong focus on wellbeing and personal growth, with 99% of graduates accepted into their first-choice university.</p>
+          <div class="school-card-cta"><a href="https://www.ais.com.sg/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
+
+      <div class="school-card">
+        <div class="school-card-image">
+          <img src="images/schools/bcs-singapore.webp" alt="Brighton College Singapore">
+          </div>
+          <div class="school-card-body">
+            <div class="school-card-logo"><img src="images/logos/bcs-singapore.webp" alt="BCS Logo"></div>
+            <h3 class="school-card-title">Brighton College (Singapore)</h3>
+            <div class="school-card-meta"><strong>Ages:</strong> 18 months to 18 years<br><strong>Pathway:</strong> Pre-Nursery to Year 13<br><strong>Curriculum:</strong> English National Curriculum, IGCSE, A Levels</div>
+            <p class="school-card-desc">An academically ambitious school that fosters a love of learning. Inspired by the heritage and academic tradition of Brighton College in the UK, the school is guided by the values of curiosity, confidence and kindness, with exceptional pastoral care and a rich programme of sport, music and the performing arts.</p>
+            <div class="school-card-cta"><a href="https://www.brightoncollege.edu.sg/" class="find-out-more">Find out more</a></div>
+          </div>
+        </div>
+
+        <div class="school-card">
+          <div class="school-card-image">
+            <img src="images/schools/sais-singapore.webp" alt="Stamford American International School Singapore">
+          </div>
+          <div class="school-card-body">
+            <div class="school-card-logo"><img src="images/logos/sais-singapore.webp" alt="SAIS Logo"></div>
+            <h3 class="school-card-title">Stamford American International School</h3>
+            <div class="school-card-meta"><strong>Ages:</strong> 18 months to 18 years &bull; Boarding available<br><strong>Pathway:</strong> Infant Care to Grade 12<br><strong>Curriculum:</strong> American Curriculum, IB (PYP, MYP, DP)</div>
+            <p class="school-card-desc">A fully international education from early years through high school, empowering students to create their unique future. An IB World School accredited by CIS and WASC with a rich and flexible curriculum, welcoming more than 75 nationalities.</p>
+            <div class="school-card-cta"><a href="https://www.sais.edu.sg/" class="find-out-more">Find out more</a></div>
+          </div>
+        </div>
+
+      <!-- Hong Kong + Thailand -->
+      <h3 class="country-label col-1" id="hong-kong">Hong Kong</h3>
+      <h3 class="country-label col-2-3" id="thailand">Thailand</h3>
+
+      <div class="school-card">
+        <div class="school-card-image">
+          <img src="images/schools/sas-hong-kong.webp" alt="Stamford American School Hong Kong">
+        </div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/sas-hong-kong.webp" alt="SAS HK Logo"></div>
+          <h3 class="school-card-title">Stamford American School Hong Kong</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 5 to 18 years<br><strong>Pathway:</strong> KG2 to Grade 12<br><strong>Curriculum:</strong> American Curriculum, International Baccalaureate</div>
+          <p class="school-card-desc">A world-class international education blending rigorous American standards with an innovative, inquiry-based learning approach. Students choose from three graduation pathways: the full IB Diploma, select IB courses, or the Stamford American High School Diploma.</p>
+          <div class="school-card-cta"><a href="https://www.sais.edu.hk/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
+      <div class="school-card">
+        <div class="school-card-image"><img src="images/schools/st-andrews-dusit.webp" alt="St Andrews Dusit"></div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/st-andrews-dusit.webp" alt="St Andrews Dusit Logo"></div>
+          <h3 class="school-card-title">St Andrews International School Dusit</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 2 to 11 years<br><strong>Pathway:</strong> Pre-Nursery to Year 6<br><strong>Curriculum:</strong> English National Curriculum</div>
+          <p class="school-card-desc">A small, inclusive primary school in central Bangkok, recognised as Cognita Asia's School of the Year. Empowers curious individuals through an engaging British curriculum, enrichment clubs, student leadership and sustainability initiatives.</p>
+          <div class="school-card-cta"><a href="https://www.standrewsdusit.com/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
+      <div class="school-card">
+        <div class="school-card-image"><img src="images/schools/st-andrews-green-valley.webp" alt="St Andrews Green Valley"></div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/st-andrews-green-valley.webp" alt="St Andrews GV Logo"></div>
+          <h3 class="school-card-title">St Andrews International School Green Valley</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 2 to 18 years<br><strong>Pathway:</strong> Pre-Nursery to Year 13<br><strong>Curriculum:</strong> English National Curriculum, IGCSEs, IB Diploma</div>
+          <p class="school-card-desc">Set on a spacious 80-acre tropical estate in Rayong. Known for outdoor learning philosophy, elite sports facilities including an 8-lane pool and equestrian centre, welcoming students from 35 nationalities.</p>
+          <div class="school-card-cta"><a href="https://www.standrewsgreenvalley.com/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
+
+      <!-- Thailand cont. + India -->
+      <h3 class="country-label col-1-2">Thailand cont.</h3>
+      <h3 class="country-label col-3" id="india">India</h3>
+
+      <div class="school-card">
+        <div class="school-card-image"><img src="images/schools/st-andrews-sathorn.webp" alt="St Andrews Sathorn"></div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/st-andrews-sathorn.webp" alt="St Andrews Sathorn Logo"></div>
+          <h3 class="school-card-title">St Andrews International School Sathorn</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 2 to 11 years<br><strong>Pathway:</strong> Nursery to Year 6<br><strong>Curriculum:</strong> English National Curriculum</div>
+          <p class="school-card-desc">A primary-focused campus in central Bangkok, providing a caring British education that recognises each child's individual needs. Part of the Cognita family, benefiting from shared resources and a supportive, tolerant community.</p>
+          <div class="school-card-cta"><a href="https://www.standrewssathorn.com/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
+      <div class="school-card">
+        <div class="school-card-image"><img src="images/schools/st-andrews-sukhumvit-107.webp" alt="St Andrews Sukhumvit 107"></div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/st-andrews-sukhumvit-107.webp" alt="St Andrews Sukhumvit Logo"></div>
+          <h3 class="school-card-title">St Andrews International School Sukhumvit 107</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 2 to 18 years<br><strong>Pathway:</strong> Nursery to Year 13<br><strong>Curriculum:</strong> English National Curriculum, IGCSEs, IB Diploma</div>
+          <p class="school-card-desc">Provides a holistic British education integrated with the IB Primary Years Programme and IB Diploma. Fosters critical thinking, creativity and a global outlook across a diverse community of over 55 nationalities.</p>
+          <div class="school-card-cta"><a href="https://www.standrewssukhumvit.com/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
+      <div class="school-card">
+        <div class="school-card-image"><img src="images/schools/chirec-india.webp" alt="CHIREC International School"></div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/chirec-india.webp" alt="CHIREC Logo"></div>
+          <h3 class="school-card-title">CHIREC International School</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 18 months to 18 years<br><strong>Pathway:</strong> Nursery to Grade 12<br><strong>Curriculum:</strong> CBSE, Cambridge, IB Diploma, IB Career-related</div>
+          <p class="school-card-desc">Consistently ranked among the top schools in India, with over 35 years of experience educating the whole child. Combines innovative teaching with a focus on ethics, character building and academic excellence across three campuses, with a 1:13 student-teacher ratio.</p>
+          <div class="school-card-cta"><a href="https://www.chirec.ac.in/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
+
+      <!-- Vietnam -->
+      <h3 class="country-label col-1-3" id="vietnam">Vietnam</h3>
+
+      <div class="school-card">
+        <div class="school-card-image"><img src="images/schools/ishcmc-vietnam.webp" alt="ISHCMC"></div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/ishcmc-vietnam.webp" alt="ISHCMC Logo"></div>
+          <h3 class="school-card-title">International School Ho Chi Minh City (ISHCMC)</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 2 to 18 years<br><strong>Pathway:</strong> Early Explorers to Grade 12<br><strong>Curriculum:</strong> International Baccalaureate (PYP, MYP, DP)</div>
+          <p class="school-card-desc">Ho Chi Minh City's first international school, with over 30 years of experience. As a full IB World School, ISHCMC serves students from 60+ nationalities. 98% of graduates are accepted to their top-choice university, earning over $56 million USD in scholarships.</p>
+          <div class="school-card-cta"><a href="https://www.ishcmc.com/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
+      <div class="school-card">
+        <div class="school-card-image"><img src="images/schools/ishcmc-american-academy.webp" alt="ISHCMC American Academy"></div>
+        <div class="school-card-body">
+          <div class="school-card-logo"><img src="images/logos/ishcmc-american-academy.webp" alt="ISHCMC AA Logo"></div>
+          <h3 class="school-card-title">ISHCMC - American Academy</h3>
+          <div class="school-card-meta"><strong>Ages:</strong> 11 to 18 years<br><strong>Pathway:</strong> Grade 6 to Grade 12<br><strong>Curriculum:</strong> American Curriculum, AP, Syracuse University SUPA</div>
+          <p class="school-card-desc">The first high school in Vietnam to offer Advanced Placement (AP) and Syracuse University (SUPA) credits. A 100% English-language curriculum combined with Vietnamese language studies, empowering students for competitive university applications worldwide.</p>
+          <div class="school-card-cta"><a href="https://www.aavn.edu.vn/" class="find-out-more">Find out more</a></div>
+        </div>
+      </div>
+
+    </div><!-- /school-grid -->
+
+    <a href="#schools" class="back-to-menu">Back to country menu</a>
+
+  </div>
+</section>
+
+<!-- ENQUIRY FORM -->
+<section class="enquiry-section" id="enquiry">
+  <div class="enquiry-bg"></div>
+  <div class="container">
+    <div class="enquiry-grid">
+      <div class="enquiry-text">
+        <h2 class="h2-underline">Relocating to Asia? Let Us Help</h2>
+        <p>Tell us about your family's moving plans and we'll connect you with the right school's admissions team to provide tailored guidance for your family's needs. Need more information? We can also arrange online consultations or invite you to virtual school open houses.</p>
+      </div>
+      <form class="enquiry-form" onsubmit="return false;">
+        <div class="form-row">
+          <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your full name"></div>
+          <div class="form-group"><label>Email *</label><input type="email" placeholder="your@email.com"></div>
+        </div>
+        <div class="form-group"><label>Phone</label><input type="tel" placeholder="+65 xxxx xxxx"></div>
+        <div class="form-group"><label>Current Country</label><input type="text" placeholder="Where are you relocating from?"></div>
+        <div class="form-row">
+          <div class="form-group"><label>Destination Country *</label>
+            <select><option value="">Select destination...</option><option>Singapore</option><option>Hong Kong</option><option>Thailand</option><option>Vietnam</option><option>India</option><option>Not yet decided</option></select>
+          </div>
+          <div class="form-group"><label>Relocation Timeline</label>
+            <select><option value="">Select timeline...</option><option>Immediate</option><option>Within 3 months</option><option>Longer than 3 months</option></select>
+          </div>
+        </div>
+        <div class="form-group"><label>Preferred School</label>
+          <select><option value="">Select a school or request consultation...</option><option>Australian International School Singapore</option><option>Brighton College Singapore</option><option>Stamford American International School Singapore</option><option>Stamford American School Hong Kong</option><option>St Andrews International School Dusit</option><option>St Andrews International School Green Valley</option><option>St Andrews International School Sathorn</option><option>St Andrews International School Sukhumvit 107</option><option>ISHCMC</option><option>ISHCMC - American Academy</option><option>CHIREC International School</option><option>Request a consultation to recommend the best pathway</option></select>
+        </div>
+        <button type="submit" class="form-submit">Speak With Our Admissions Team</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS (consolidated from old "Joining Mid-Year" block - overlap removed) -->
+<section class="two-col">
+  <div class="container">
+    <div>
+      <h2 class="h2-underline">How It Works</h2>
+      <p>Our admissions teams across Asia regularly welcome families joining during the school year.</p>
+      <ul>
+        <li>Share your family's plans and we'll recommend schools that match your child's needs</li>
+        <li>Virtual tours and online consultations available before you relocate</li>
+        <li>Settling-in support including buddy programmes and city orientation advice</li>
+        <li>For many relocating families, children are able to join classes within weeks of application</li>
+      </ul>
+      <a href="#enquiry" class="btn" style="margin-top:8px;">Start Your Application</a>
+    </div>
+    <div>
+      <img src="https://www.cognita.com/wp-content/uploads/sites/10/2023/10/2J6A2087_b.jpg" alt="Students and teacher" class="rect-img">
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORTING THE WHOLE FAMILY (kept as-is) -->
+<section class="two-col bg-light-blue reverse">
+  <div class="container">
+    <div>
+      <h2 class="h2-underline">Supporting the Whole Family</h2>
+      <p>Relocating internationally is a big step. Cognita school communities help families settle quickly.</p>
+      <p><strong>Relocating families benefit from:</strong></p>
+      <ul>
+        <li>Welcoming parent communities and networks</li>
+        <li>Buddy programmes for students</li>
+        <li>School transport options</li>
+        <li>Co-curricular activities and sports</li>
+        <li>International communities of globally mobile families</li>
+      </ul>
+    </div>
+    <div>
+      <img src="images/Culture-of-care.jpg" alt="Cognita culture of care" class="rect-img">
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>Start Your Child's Next Chapter in Asia</h2>
+    <p>Whether your relocation is planned or unexpected, Cognita schools across Asia are ready to welcome your family.</p>
+    <a href="#enquiry" class="btn btn-white">Speak with Admissions</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="container">
+    <div class="faq-grid">
+      <h2 class="h2-underline">Frequently Asked Questions</h2>
+      <div class="faq-item open"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">Can my child join mid-year?</button></h3><div class="faq-answer">Yes. Many students join Cognita schools throughout the academic year depending on space availability. Our admissions teams are experienced in supporting families who need to relocate at short notice and can guide you through the process quickly.</div></div>
+      <div class="faq-item"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">Do you support students transferring between different curricula?</button></h3><div class="faq-answer">Yes. Our schools regularly support students transferring from British, American, IB, Australian and other international systems. Cognita offers schools across multiple curriculum pathways, so we can help identify the best fit for your child's academic background and future goals.</div></div>
+      <div class="faq-item"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">How quickly can admissions be processed?</button></h3><div class="faq-answer">Admissions reviews are typically completed within a few days once required documents are received. Students transferring between Cognita schools benefit from a seamless process, with records shared internally to support a smooth transition.</div></div>
+      <div class="faq-item"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">Can we visit before relocating?</button></h3><div class="faq-answer">Yes. Virtual tours and admissions meetings are available for families who are not yet able to travel. Many of our schools also offer in-person campus tours that can be arranged to coincide with a visit to the city.</div></div>
+      <div class="faq-item"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">What curriculum options are available at Cognita schools in Asia?</button></h3><div class="faq-answer">Cognita schools in Asia offer a wide range of internationally recognised curricula including the International Baccalaureate (IB), British (English National Curriculum with IGCSEs and A Levels), American, Australian and Indian (CBSE and Cambridge). This breadth means families relocating to Asia can often find curriculum continuity for their child, regardless of their previous schooling background.</div></div>
+      <div class="faq-item"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">Which countries in Asia does Cognita have schools?</button></h3><div class="faq-answer">Cognita operates international schools across five countries in Asia: Singapore, Hong Kong, Thailand, Vietnam and India. Each country offers schools with distinct curriculum options and community profiles, giving relocating families genuine choice based on their destination and educational preferences.</div></div>
+      <div class="faq-item"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">How does Cognita support families relocating between countries?</button></h3><div class="faq-answer">As a global school network, Cognita can support families who move between countries by coordinating admissions, transferring student records internally, and providing curriculum alignment guidance. If your family relocates again in the future, the Cognita network makes transitions between schools smoother than starting from scratch with a new provider.</div></div>
+      <div class="faq-item"><h3><button class="faq-question" onclick="this.closest('.faq-item').classList.toggle('open')">What age groups do Cognita schools in Asia cater for?</button></h3><div class="faq-answer">Cognita schools in Asia cater for students from as young as 2 months (infant care at AIS Singapore) through to 18 years (Year 12 / Grade 12). Most schools offer education from early years or pre-primary through to secondary school completion, with several offering the full IB Diploma or A Level pathway for university preparation.</div></div>
+    </div>
+  </div>
+</section>
+
+<a href="#top" class="back-to-top">Back to top</a>
+
+<!-- FOOTER -->
+<div style="background:#162D39; padding:60px 0 40px;">
+  <div class="footer-desktop" style="max-width:var(--max-width); margin:0 auto; padding:0 80px;">
+    <img src="images/cognita-desktop-footer.png" alt="Cognita Footer" style="width:100%; display:block;">
+  </div>
+  <div class="footer-mobile" style="padding:0 24px;">
+    <img src="images/cognita-mobile-footer.jpg" alt="Cognita Footer" style="width:100%; display:block;">
+  </div>
+</div>
+
+<!-- FLOATING ACTION BUTTONS -->
+<div class="floating-btns">
+  <a href="#" target="_blank" class="floating-btn floating-btn-whatsapp">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Chat with us
+  </a>
+  <button class="floating-btn floating-btn-enquire" onclick="document.getElementById('popup-form').classList.add('active')">
+    <svg viewBox="0 0 24 24" fill="white"><path d="M4.5 2A2.5 2.5 0 002 4.5v2.006a1 1 0 002 0V4.5a.5.5 0 01.5-.5h2.006a1 1 0 000-2H4.5zm13 0a1 1 0 100 2h2.006a.5.5 0 01.5.5v2.006a1 1 0 102 0V4.5A2.5 2.5 0 0019.506 2H17.5zM12 7a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H8a1 1 0 110-2h3V8a1 1 0 011-1zM3 17.5a1 1 0 012 0v2.006a.5.5 0 00.5.5h2.006a1 1 0 110 2H4.5A2.5 2.5 0 012 19.506V17.5zm19 0a1 1 0 10-2 0v2.006a.5.5 0 01-.5.5h-2.006a1 1 0 100 2h2.006a2.5 2.5 0 002.5-2.5V17.5z"/></svg>
+    Enquire now
+  </button>
+</div>
+
+<!-- POPUP ENQUIRY FORM -->
+<div class="popup-overlay" id="popup-form" onclick="if(event.target===this)this.classList.remove('active')">
+  <div class="popup-content">
+    <button class="popup-close" onclick="document.getElementById('popup-form').classList.remove('active')">&times;</button>
+    <h2 style="color:var(--cognita-blue);">Enquire Now</h2>
+    <p>Tell us about your family's moving plans and we'll connect you with the right school.</p>
+    <form onsubmit="return false;">
+      <div class="form-row">
+        <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your full name"></div>
+        <div class="form-group"><label>Email *</label><input type="email" placeholder="your@email.com"></div>
+      </div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="+65 xxxx xxxx"></div>
+      <div class="form-group"><label>Current Country</label><input type="text" placeholder="Where are you relocating from?"></div>
+      <div class="form-row">
+        <div class="form-group"><label>Destination Country *</label>
+          <select><option value="">Select destination...</option><option>Singapore</option><option>Hong Kong</option><option>Thailand</option><option>Vietnam</option><option>India</option><option>Not yet decided</option></select>
+        </div>
+        <div class="form-group"><label>Relocation Timeline</label>
+          <select><option value="">Select timeline...</option><option>Immediate</option><option>Within 3 months</option><option>Longer than 3 months</option></select>
+        </div>
+      </div>
+      <div class="form-group"><label>Preferred School</label>
+        <select><option value="">Select a school or request consultation...</option><option>Australian International School Singapore</option><option>Brighton College Singapore</option><option>Stamford American International School Singapore</option><option>Stamford American School Hong Kong</option><option>St Andrews International School Dusit</option><option>St Andrews International School Green Valley</option><option>St Andrews International School Sathorn</option><option>St Andrews International School Sukhumvit 107</option><option>ISHCMC</option><option>ISHCMC - American Academy</option><option>CHIREC International School</option><option>Request a consultation to recommend the best pathway</option></select>
+      </div>
+      <button type="submit" class="form-submit">Speak With Our Admissions Team</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
