@@ -579,6 +579,19 @@ h3 { font-family: var(--font-main); font-size: 25px; font-weight: 500; color: va
 <div id="page-content"></div>
 
 <script>
+// Auto-unlock if already authenticated in this tab
+(async function checkSession() {
+  const savedPwd = sessionStorage.getItem("_pk");
+  if (savedPwd) {
+    try {
+      const html = await decryptContent(savedPwd);
+      showContent(html);
+    } catch (e) {
+      sessionStorage.removeItem("_pk");
+    }
+  }
+})();
+
 async function deriveKey(password, salt) {
   const enc = new TextEncoder();
   const keyMaterial = await crypto.subtle.importKey(
@@ -600,7 +613,7 @@ function b64ToBuffer(b64) {
   return buf;
 }
 
-async function decrypt(password) {
+async function decryptContent(password) {
   const payload = JSON.parse(document.getElementById("encrypted-payload").textContent);
   const salt = b64ToBuffer(payload.salt);
   const iv = b64ToBuffer(payload.iv);
@@ -610,6 +623,21 @@ async function decrypt(password) {
     { name: "AES-GCM", iv: iv }, key, data
   );
   return new TextDecoder().decode(decrypted);
+}
+
+function showContent(html) {
+  const headTemplate = document.getElementById("original-head").innerHTML;
+  document.head.innerHTML = headTemplate;
+  const panel = document.getElementById("login-panel");
+  if (panel) panel.style.display = "none";
+  const container = document.getElementById("page-content");
+  container.innerHTML = html;
+  container.style.display = "block";
+  document.body.style.background = "";
+  document.body.style.display = "";
+  document.body.style.alignItems = "";
+  document.body.style.justifyContent = "";
+  document.body.style.minHeight = "";
 }
 
 async function handleLogin(e) {
@@ -624,18 +652,9 @@ async function handleLogin(e) {
   error.textContent = "";
 
   try {
-    const html = await decrypt(pwd);
-    const headTemplate = document.getElementById("original-head").innerHTML;
-    document.head.innerHTML = headTemplate;
-    panel.style.display = "none";
-    const container = document.getElementById("page-content");
-    container.innerHTML = html;
-    container.style.display = "block";
-    document.body.style.background = "";
-    document.body.style.display = "";
-    document.body.style.alignItems = "";
-    document.body.style.justifyContent = "";
-    document.body.style.minHeight = "";
+    const html = await decryptContent(pwd);
+    sessionStorage.setItem("_pk", pwd);
+    showContent(html);
   } catch (err) {
     error.textContent = "Incorrect password";
     panel.classList.add("shake");
