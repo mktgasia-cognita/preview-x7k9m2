@@ -1,0 +1,64 @@
+{
+  "school": "sais",
+  "short_code": "SAIS",
+  "period_start": "2026-06-14",
+  "period_end": "2026-06-20",
+  "dates_display": "Jun 14 - 20, 2026",
+  "generated_at": "2026-06-22",
+  "ads_count": 24,
+  "campaigns_count": 3,
+  "cadence_days": 7,
+  "gates_passed": true,
+  "gates_summary": {
+    "thumbnail_coverage": {
+      "passed": true,
+      "severity": "required"
+    },
+    "thumbnail_resolution": {
+      "passed": true,
+      "severity": "required"
+    },
+    "enrichment_rate": {
+      "passed": true,
+      "severity": "advisory"
+    },
+    "unmapped_labels": {
+      "passed": true,
+      "severity": "required"
+    },
+    "data_completeness": {
+      "passed": true,
+      "severity": "required"
+    },
+    "period_spend_floor": {
+      "passed": true,
+      "severity": "required"
+    },
+    "card_details": {
+      "passed": true,
+      "severity": "advisory"
+    },
+    "minimum_ads": {
+      "passed": true,
+      "severity": "required"
+    },
+    "metric_consistency": {
+      "passed": true,
+      "severity": "required"
+    }
+  },
+  "steps_completed": [
+    "validate",
+    "write_period_json",
+    "fetch_thumbnails",
+    "screenshot_previews_timeout",
+    "enrich",
+    "manifest",
+    "generate",
+    "quality_gates",
+    "encrypt",
+    "write_output"
+  ],
+  "dashboard_filename": "sais-meta-ads-jun14-jun20.html",
+  "encrypted": true
+}
