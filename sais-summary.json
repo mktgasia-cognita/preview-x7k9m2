@@ -51,7 +51,7 @@
     "validate",
     "write_period_json",
     "fetch_thumbnails",
-    "screenshot_previews",
+    "screenshot_previews_timeout",
     "enrich",
     "manifest",
     "generate",
