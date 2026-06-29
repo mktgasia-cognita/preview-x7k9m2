@@ -1,12 +1,12 @@
 {
   "school": "sais",
   "short_code": "SAIS",
-  "period_start": "2026-06-14",
-  "period_end": "2026-06-20",
-  "dates_display": "Jun 14 - 20, 2026",
-  "generated_at": "2026-06-23",
-  "ads_count": 23,
-  "campaigns_count": 3,
+  "period_start": "2026-06-21",
+  "period_end": "2026-06-27",
+  "dates_display": "Jun 21 - 27, 2026",
+  "generated_at": "2026-06-29",
+  "ads_count": 62,
+  "campaigns_count": 4,
   "cadence_days": 7,
   "gates_passed": true,
   "gates_summary": {
@@ -51,7 +51,7 @@
     "validate",
     "write_period_json",
     "fetch_thumbnails",
-    "screenshot_previews_timeout",
+    "screenshot_previews",
     "enrich",
     "manifest",
     "generate",
@@ -59,6 +59,6 @@
     "encrypt",
     "write_output"
   ],
-  "dashboard_filename": "sais-meta-ads-jun14-jun20.html",
+  "dashboard_filename": "sais-meta-ads-jun21-jun27.html",
   "encrypted": true
 }
