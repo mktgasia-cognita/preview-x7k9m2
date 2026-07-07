@@ -19,7 +19,7 @@
       "severity": "required"
     },
     "enrichment_rate": {
-      "passed": true,
+      "passed": false,
       "severity": "advisory"
     },
     "unmapped_labels": {
@@ -35,7 +35,7 @@
       "severity": "required"
     },
     "card_details": {
-      "passed": true,
+      "passed": false,
       "severity": "advisory"
     },
     "minimum_ads": {
@@ -48,11 +48,12 @@
     }
   },
   "steps_completed": [
+    "refresh_metadata",
     "validate",
     "write_period_json",
-    "fetch_thumbnails",
+    "fetch_thumbnails_timeout",
     "screenshot_previews",
-    "enrich",
+    "enrich_failed",
     "manifest",
     "generate",
     "quality_gates",
