@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow, noarchive">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; form-action 'none';">
+<meta name="referrer" content="no-referrer">
 <title>CreativeIQ Report - Protected</title>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -68,37 +70,66 @@ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-
             }, aesKey, b64decode(CT));
         }).then(function(decrypted) {
             var html = new TextDecoder().decode(decrypted);
-            try { sessionStorage.setItem(SK, password); } catch(e) {}
+            try { sessionStorage.setItem(SK, password); sessionStorage.setItem(SK + "_ts", String(Date.now())); } catch(e) {}
             document.open();
             document.write(html);
             document.close();
         });
     }
 
+    var CACHE_TTL_MS = 8 * 60 * 60 * 1000;
     var saved = null;
-    try { saved = sessionStorage.getItem(SK); } catch(e) {}
+    var tsKey = SK + "_ts";
+    try {
+        var ts = parseInt(sessionStorage.getItem(tsKey) || "0", 10);
+        if (Date.now() - ts < CACHE_TTL_MS) {
+            saved = sessionStorage.getItem(SK);
+        } else {
+            sessionStorage.removeItem(SK);
+            sessionStorage.removeItem(tsKey);
+        }
+    } catch(e) {}
     if (saved) {
         tryDecrypt(saved).catch(function() {
-            try { sessionStorage.removeItem(SK); } catch(e) {}
+            try { sessionStorage.removeItem(SK); sessionStorage.removeItem(tsKey); } catch(e) {}
         });
     }
 
+    var attempts = 0;
+    var locked = false;
+
     document.getElementById("form").addEventListener("submit", function(e) {
         e.preventDefault();
+        if (locked) return;
         var pw = document.getElementById("pw");
         var btn = document.getElementById("btn");
         var msg = document.getElementById("msg");
+
+        attempts++;
+        if (attempts > 10) {
+            locked = true;
+            btn.disabled = true;
+            msg.className = "msg error";
+            msg.textContent = "Too many attempts. Refresh the page to try again.";
+            return;
+        }
+
+        var delay = attempts > 5 ? 5000 : (attempts > 3 ? 1000 : 0);
+
         btn.disabled = true;
         msg.className = "msg info";
-        msg.textContent = "Decrypting...";
+        msg.textContent = delay > 0 ? "Please wait..." : "Decrypting...";
 
-        tryDecrypt(pw.value).catch(function() {
-            btn.disabled = false;
-            pw.classList.add("error");
-            msg.className = "msg error";
-            msg.textContent = "Incorrect password";
-            setTimeout(function() { pw.classList.remove("error"); }, 400);
-        });
+        setTimeout(function() {
+            msg.textContent = "Decrypting...";
+            tryDecrypt(pw.value).catch(function() {
+                btn.disabled = false;
+                pw.classList.add("error");
+                msg.className = "msg error";
+                msg.textContent = "Incorrect password" + (attempts > 3 ? " (" + (10 - attempts) + " attempts remaining)" : "");
+                setTimeout(function() { pw.classList.remove("error"); }, 400);
+            });
+        }, delay);
     });
 })();
 </script>
