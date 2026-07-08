@@ -17,7 +17,7 @@
         : '<span></span>';
       parts.push('<div class="nav-arrows">' + prevLink + nextLink + '</div>');
     }
-    if (reports.length > 1) {
+    if (reports.length > 1 && !el.classList.contains('report-nav-compact')) {
       var items = '<span class="nav-index-label">All Reports:</span>';
       for (var i = 0; i < reports.length; i++) {
         var r = reports[i];
