@@ -1,5 +1,5 @@
 (function() {
-  var reports = [{"filename": "ishcmc-meta-ads-jun29-jul5.html", "dates": "Jun 29 - Jul 5, 2026"}];
+  var reports = [{"filename": "ishcmc-meta-ads-jun29-jul5.html", "dates": "Jun 29 - Jul 5, 2026"}, {"filename": "ishcmc-meta-ads-jul6-jul12.html", "dates": "Jul 6 - 12, 2026"}];
   document.querySelectorAll('.report-nav').forEach(function(el) {
     var current = el.dataset.current;
     if (!reports.length) return;
