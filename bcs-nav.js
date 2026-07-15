@@ -1,5 +1,5 @@
 (function() {
-  var reports = [{"filename": "bcs-meta-ads-mar22-apr4.html", "dates": "Mar 22 - Apr 4, 2026"}, {"filename": "bcs-meta-ads-jun29-jul5.html", "dates": "Jun 29 - Jul 5, 2026"}];
+  var reports = [{"filename": "bcs-meta-ads-mar22-apr4.html", "dates": "Mar 22 - Apr 4, 2026"}, {"filename": "bcs-meta-ads-jun29-jul5.html", "dates": "Jun 29 - Jul 5, 2026"}, {"filename": "bcs-meta-ads-jul6-jul12.html", "dates": "Jul 6 - 12, 2026"}];
   document.querySelectorAll('.report-nav').forEach(function(el) {
     var current = el.dataset.current;
     if (!reports.length) return;
