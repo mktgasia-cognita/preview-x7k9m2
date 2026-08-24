@@ -1,5 +1,5 @@
 (function() {
-  var reports = [{"filename": "ishcmc-meta-ads-jun29-jul5.html", "dates": "Jun 29 - Jul 5, 2026"}, {"filename": "ishcmc-meta-ads-jul6-jul12.html", "dates": "Jul 6 - 12, 2026"}, {"filename": "ishcmc-meta-ads-jul13-jul19.html", "dates": "Jul 13 - 19, 2026"}, {"filename": "ishcmc-meta-ads-jul20-jul26.html", "dates": "Jul 20 - 26, 2026"}, {"filename": "ishcmc-meta-ads-aug10-aug16.html", "dates": "Aug 10 - 16, 2026"}];
+  var reports = [{"filename": "ishcmc-meta-ads-jun29-jul5.html", "dates": "Jun 29 - Jul 5, 2026"}, {"filename": "ishcmc-meta-ads-jul6-jul12.html", "dates": "Jul 6 - 12, 2026"}, {"filename": "ishcmc-meta-ads-jul13-jul19.html", "dates": "Jul 13 - 19, 2026"}, {"filename": "ishcmc-meta-ads-jul20-jul26.html", "dates": "Jul 20 - 26, 2026"}, {"filename": "ishcmc-meta-ads-aug10-aug16.html", "dates": "Aug 10 - 16, 2026"}, {"filename": "ishcmc-meta-ads-aug17-aug23.html", "dates": "Aug 17 - 23, 2026"}];
   document.querySelectorAll('.report-nav').forEach(function(el) {
     var current = el.dataset.current;
     if (!reports.length) return;
